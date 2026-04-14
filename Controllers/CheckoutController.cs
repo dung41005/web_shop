@@ -84,7 +84,6 @@ namespace UC.eComm.Publish.Controllers
             return View(model);
         }
         [HttpPost]
-        [HttpPost]
         public IActionResult Payment_Select(string address_id)
         {
             // Lưu ID địa chỉ được chọn để dùng sau
@@ -231,6 +230,31 @@ namespace UC.eComm.Publish.Controllers
                        ?? new List<AddressCookie>();
             }
             return new List<AddressCookie>();
+        }
+        [HttpPost("get-districts")]
+        public IActionResult GetDistricts(string province_id)
+        {
+            StringBuilder html = new StringBuilder();
+            List<Address> addresses = new List<Address>();
+            try
+            {
+                html.Append("<option value=\"\">Chọn Quận / Huyện</option>");
+                addresses = _jsonService.GetAddressFromJsonFile();
+                List<Address> districts = addresses
+                                    .Where(d => d.ProvinceId == province_id)
+                                    .GroupBy(a => a.DistrictId)
+                                    .Select(g => g.First())
+                                    .ToList();
+                foreach (var item in districts)
+                {
+                    if (item.ProvinceId == province_id)
+                    {
+                        html.Append("<option value=\"" + item.DistrictId + "\">" + item.District + "</option>");
+                    }
+                }
+            }
+            catch (Exception ex) { }
+            return Ok(html.ToString());
         }
         [HttpPost("get-wards")]
         public IActionResult GetWards(string district_id)
