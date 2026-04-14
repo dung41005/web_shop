@@ -1,0 +1,94 @@
+.pt-20{padding-top: 20px;}
+#modalBookingRoom .modal-header{align-self: center;}
+.check-evoucher{
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	font-weight: 600;
+	color: #66c244;
+	margin-top: 15px;
+}
+.check-evoucher img{
+	max-width: 25px; margin-right: 5px;
+}
+.product-well {
+	min-height: 20px;
+	border: 1px solid #e3e3e3;
+	border-radius: 0px;
+	-webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+	box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+	background-color: #fff;
+	position: relative;
+}
+.product-well .row {
+	height: 200px;
+	overflow: hidden;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	transition: height 0.2s;
+}
+.product-well.expanded .row {
+	height: auto;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	transition: height 0.2s;
+}
+.product-well .btn-view-more {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 120px;
+	margin-left: -60px;
+	margin-top: -15px;
+	text-align: center;
+}
+.product-well .btn{
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	border-radius: 0px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.product-well .btn-default {
+	color: #333333;
+	background-color: #ffffff;
+	border-color: #cccccc;
+}
+.product-well .btn:focus, .product-well .btn:active, .product-well .btn:hover {
+	box-shadow: none;
+}
+.product-well .btn-default:hover {
+	color: #333333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+.product-well .btn-view-more .less-text {
+	display: none;
+}
+.product-well.expanded .more-text {
+	display: none;
+}
+.product-well.expanded .less-text {
+	display: block;
+}
+.about_us_description a {
+    opacity: 0.5;
+    color:inherit !important;
+    line-height:30px;
+}
+.about_us_description a:hover {
+    opacity: 1;
+}

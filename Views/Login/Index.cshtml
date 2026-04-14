@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_LayoutAccount.cshtml";
+}
+
+<!-- Account Logo -->
+<div class="account-logo">
+	<a href="/Dashboard"><img src="~/img/UCVN.png" alt="UCVN eCommerce"></a>
+</div>
+<!-- /Account Logo -->
+
+<div class="account-box">
+	<div class="account-wrapper">
+		<h3 class="account-title">Đăng nhập</h3>
+		<p class="account-subtitle">Quản trị hệ thống UCVN.eCommerce</p>
+
+		<!-- Account Form -->
+		<form action="/Dashboard">
+			<div class="input-block mb-4">
+				<label class="col-form-label">Tên đăng nhập</label>
+				<input class="form-control" type="text" value="quantri@ouc.vn">
+			</div>
+			<div class="input-block mb-4">
+				<div class="row align-items-center">
+					<div class="col">
+						<label class="col-form-label">Mật khẩu</label>
+					</div>
+					<div class="col-auto">
+						<a class="text-muted" href="forgot-password.html">
+							Quên mật khẩu?
+						</a>
+					</div>
+				</div>
+				<div class="position-relative">
+					<input class="form-control" type="password" value="123321" id="password">
+					<span class="fa-solid fa-eye-slash" id="toggle-password"></span>
+				</div>
+			</div>
+			<div class="input-block mb-4 text-center">
+				<button class="btn btn-primary account-btn" type="submit">Đăng nhập</button>
+			</div>
+			<div class="account-footer">
+				<p>Bạn chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+			</div>
+		</form>
+		<!-- /Account Form -->
+
+	</div>
+</div>
+

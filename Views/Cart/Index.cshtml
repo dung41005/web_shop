@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<section class="pt-5 mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 mx-auto">
+                <div class="row aiz-steps arrow-divider">
+                    <div class="col active">
+                        <div class="text-center text-primary">
+                            <i class="la-3x mb-2 las la-shopping-cart"></i>
+                            <h3 class="fs-14 fw-600 d-none d-lg-block">1. Giỏ hàng</h3>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <i class="la-3x mb-2 opacity-50 las la-map"></i>
+                            <h3 class="fs-14 fw-600 d-none d-lg-block opacity-50">
+                                2. Thông tin nhận hàng
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <i class="la-3x mb-2 opacity-50 las la-credit-card"></i>
+                            <h3 class="fs-14 fw-600 d-none d-lg-block opacity-50">
+                                3. Thanh toán
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <i class="la-3x mb-2 opacity-50 las la-check-circle"></i>
+                            <h3 class="fs-14 fw-600 d-none d-lg-block opacity-50">
+                                Hoàn tất
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-4" id="cart-summary">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-8 col-xl-10 mx-auto">
+                <div class="shadow-sm bg-white p-3 p-lg-4 rounded text-left">
+                    @if (Model.cartItems == null || Model.TotalPrice == 0)
+                    {
+                        <div class="text-center p-3">
+                            <i class="las la-frown la-3x opacity-60 mb-3"></i>
+                            <h3 class="h4 fw-700">Chưa có sản phẩm nào trong giỏ hàng</h3>
+                        </div>
+                    }else{
+                        <div class="mb-4">
+                            <div class="row gutters-5 d-none d-lg-flex border-bottom mb-3 pb-3">
+                                <div class="col-md-5 fw-600">Sản phẩm</div>
+                                <div class="col fw-600">Giá bán</div>
+                                <div class="col fw-600">Thuế</div>
+                                <div class="col fw-600">Số lượng</div>
+                                <div class="col fw-600">TỔNG TIỀN</div>
+                                <div class="col-auto fw-600">Xóa</div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                @foreach (var item in Model.cartItems)
+                                {
+                                    <li class="list-group-item px-0 px-lg-3">
+                                        <div class="row gutters-5">
+                                        <div class="col-lg-5 d-flex">
+                                            <span class="mr-2 ml-0">
+                                                <img src="@item.Image.Split('|')[0]" class="img-fit size-60px rounded" alt="@item.Name">
+                                            </span>
+                                            <span class="fs-14 opacity-60">@item.Name</span>
+                                        </div>
+
+                                        <div class="col-lg col-4 order-1 order-lg-0 my-3 my-lg-0">
+                                            <span class="opacity-60 fs-12 d-block d-lg-none">Giá bán</span>
+                                            <span class="fw-600 fs-16">@item.Price.ToString("N0") @item.UnitPrice</span>
+                                        </div>
+                                        <div class="col-lg col-4 order-2 order-lg-0 my-3 my-lg-0">
+                                            <span class="opacity-60 fs-12 d-block d-lg-none">Thuế</span>
+                                            <span class="fw-600 fs-16">0 VND</span>
+                                        </div>
+
+                                        <div class="col-lg col-6 order-4 order-lg-0">
+                                            <div class="row no-gutters align-items-center aiz-plus-minus mr-2 ml-0">
+                                                    <span class="fw-600 fs-16">@item.QuantityInCart</span>
+                                                @* <button class="btn col-auto btn-icon btn-sm btn-circle btn-light" type="button" data-type="minus" data-field="quantity" disabled="disabled">
+                                                    <i class="las la-minus"></i>
+                                                </button>
+                                                <input type="number" name="quantity" class="col border-0 text-center flex-grow-1 fs-16 input-number" placeholder="@item.Quantity" value="@item.QuantityInCart" min="1" max="@item.Quantity" onchange="updateQuantity(@item.Id, this)">
+                                                <button class="btn col-auto btn-icon btn-sm btn-circle btn-light" type="button" data-type="plus" data-field="quantity">
+                                                    <i class="las la-plus"></i>
+                                                </button> *@
+                                            </div>
+                                        </div>
+                                        <div class="col-lg col-4 order-3 order-lg-0 my-3 my-lg-0">
+                                            <span class="opacity-60 fs-12 d-block d-lg-none">TỔNG TIỀN</span>
+                                                <span class="fw-600 fs-16 text-primary"><span id="chosen_price">@item.TotalPrice.ToString("N0")</span> @item.UnitPrice</span>
+                                        </div>
+                                        <div class="col-lg-auto col-6 order-5 order-lg-0 text-right">
+                                            <a href="javascript:void(0)" onclick="removeFromCart(@item.Id)" class="btn btn-icon btn-sm btn-soft-primary btn-circle">
+                                                <i class="las la-trash"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                }
+                            </ul>
+                        </div>
+                    
+                        <div class="px-3 py-2 mb-4 border-top d-flex justify-content-between">
+                            <span class="opacity-60 fs-15">Tạm tính</span>
+                            <span class="fw-600 fs-17">@Model.TotalPrice.ToString("N0") VND</span>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-center text-md-left order-1 order-md-0">
+                                <a href="/" class="btn btn-link">
+                                    <i class="las la-arrow-left"></i>
+                                    Quay lại cửa hàng
+                                </a>
+                            </div>
+                            <div class="col-md-6 text-center text-md-right">
+                                <button class="btn btn-primary fw-600" onclick="window.location.href='/checkout'">Nhập địa chỉ nhận hàng »</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="chat_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-zoom product-modal" id="modal-size" role="document">
+        <div class="modal-content position-relative">
+            <div class="modal-header">
+                <h5 class="modal-title fw-600 h5">Thắc mắc về sản phẩm này</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form class="" action="#" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_token" value="Rapszq8xJNxverrIcn23lyALd25Ta0ufT7Voo3le">                    <input type="hidden" name="product_id" value="15742">
+                <div class="modal-body gry-bg px-3 pt-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control mb-3" name="title" value="Ngô ngọt nguyên hạt - Ngô Ngọt nguyên hạt AS" placeholder="Tên sản phẩm" required="">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="8" name="message" required="" placeholder="Câu hỏi"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary fw-600" data-dismiss="modal">Huỷ bỏ</button>
+                    <button type="submit" class="btn btn-primary fw-600">Gửi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

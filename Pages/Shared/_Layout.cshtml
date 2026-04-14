@@ -1,0 +1,956 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smarthr - Bootstrap Admin Template">
+    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+    <meta name="author" content="Dreamstechnologies - Bootstrap Admin Template">
+    <meta name="app-url" content="ucvn">
+    <title>@ViewData["Title"] - UC.eCommerce.App</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="~/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/plugins/fontawesome/css/all.min.css">
+
+    <!--odormeter-->
+    <link rel="stylesheet" href="~/css/odometer.css">
+    <script src="~/js/odometer.js"></script>
+
+    <!-- Slickslide CSS -->
+    @* <link rel="stylesheet" href="~/slick/slick.css">
+    <link rel="stylesheet" href="~/slick/slick-theme.css"> *@
+
+    <!-- Lineawesome CSS -->
+    <link rel="stylesheet" href="~/css/line-awesome.min.css">
+    <link rel="stylesheet" href="~/css/material.css">
+
+    <!--Css custom-->
+    <link rel="stylesheet" href="~/css/custom.css">
+    <link rel="stylesheet" href="~/css/custom2.css">
+
+    <!--Venders-->
+    <link rel="stylesheet" href="~/css/vendors.css">
+
+    <link rel="stylesheet" href="~/css/core.css">
+
+    <!-- Lineawesome CSS -->
+    <link rel="stylesheet" href="~/css/line-awesome.min.css">
+
+    <!-- Main CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+
+        :root {
+            --primary: #ed1c24;
+            --hov-primary: #2e3192;
+            --soft-primary: rgba(237,28,36,0.15);
+        }
+
+        #map {
+            width: 100%;
+            height: 250px;
+        }
+
+        #edit_map {
+            width: 100%;
+            height: 250px;
+        }
+
+        .pac-container {
+            z-index: 100000;
+        }
+
+    </style>
+    <script>
+        var AIZ = AIZ || {};
+        AIZ.local = {
+            nothing_selected: 'Không có gì được chọn',
+            nothing_found: 'Không kết quả',
+            choose_file: 'Chọn tập tin',
+            file_selected: 'Tệp đã chọn',
+            files_selected: 'Tệp được chọn',
+            add_more_files: 'Thêm nhiều tập tin',
+            adding_more_files: 'Thêm tệp khác',
+            drop_files_here_paste_or: 'Thả tệp vào đây, hoặc dán vào đây',
+            browse: 'Duyệt',
+            upload_complete: 'Tải lên hoàn tất',
+            upload_paused: 'Tải lên bị tạm dừng',
+            resume_upload: 'Tiếp tục tải lên',
+            pause_upload: 'Tạm dừng tải lên',
+            retry_upload: 'Thử tải lên lại',
+            cancel_upload: 'Hủy tải lên',
+            uploading: 'Đang tải lên',
+            processing: 'Xử lý',
+            complete: 'Hoàn tất',
+            file: 'Tập tin',
+            files: 'Tập tin',
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Wrapper -->
+    <div class="aiz-main-wrapper d-flex flex-column">
+
+
+        <!-- Top Bar -->
+        <div class="top-navbar bg-white border-bottom border-soft-secondary z-1035">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col">
+                        <ul class="list-inline d-flex justify-content-between justify-content-lg-start mb-0">
+                        </ul>
+                    </div>
+
+                    <div class="col-5 text-right d-none d-lg-block">
+                        <ul class="list-inline mb-0 h-100 d-flex justify-content-end align-items-center">
+                            <li class="list-inline-item mr-3 border-right border-left-0 pr-3 pl-0">
+                                <a href="tel:028 6686 6486" class="text-reset d-inline-block opacity-60 py-2">
+                                    <i class="la la-phone"></i>
+                                    <span>Hotline</span>
+                                    <span>098 805 0678</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-3 border-right border-left-0 pr-3 pl-0">
+                                <a href="/login" class="text-reset d-inline-block opacity-60 py-2">Đăng nhập</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="/registration" class="text-reset d-inline-block opacity-60 py-2">Đăng ký</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Top Bar -->
+        @await Component.InvokeAsync("Header")
+        @RenderBody()
+        <section class="bg-dark bg-gradient py-5 text-light footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-xl-4 text-center text-md-left">
+                        <div class="mt-4">
+                            @* <a href="#" class="d-block"> *@
+                            @*     <img class=" ls-is-cached lazyloaded" src="~/img/UCVN.png" alt="Chợ Nông Sản Online" height="44"> *@
+                            @* </a> *@
+                            @* <div class="my-3 about_us_description"> *@
+                            @*     <p><font color="#ffffff">Công ty UC Việt Nam</font></p> *@
+                            @*     <p><font color="#ffffff">Chuyên cung cấp các giải pháp về phần mềm</font></p> *@
+
+                            @* </div> *@
+
+                            @* <div class="w-300px mw-100 mx-auto mx-md-0"> *@
+                            @*     <a href="#" target="_blank" class="d-inline-block mr-3 ml-0"> *@
+                            @*         <img src="/img/logo_bct.png" class="mx-100 h-60px"> *@
+                            @*     </a> *@
+                            @* </div> *@
+                        </div>
+                    </div>
+                    @* <div class="col-lg-3 ml-xl-auto col-md-4 mr-0"> *@
+                    @*     <div class="text-center text-md-left mt-4"> *@
+                    @*         <h4 class="fs-16 text-uppercase fw-600 border-bottom border-gray-900 pb-2 mb-4"> *@
+                    @*             Thông tin liên hệ *@
+                    @*         </h4> *@
+                    @*         <ul class="list-unstyled"> *@
+                    @*             <li class="mb-2"> *@
+                    @*                 <span class="d-block opacity-30">Địa chỉ:</span> *@
+                    @*                 <span class="d-block opacity-70">Công ty UC Việt Nam: Tòa 29T1 Hoàng Đạo Thúy, Cầu Giấy, Hà Nội</span> *@
+                    @*             </li> *@
+                    @*             <li class="mb-2"> *@
+                    @*                 <span class="d-block opacity-30">Điện thoại:</span> *@
+                    @*                 <span class="d-block opacity-70">(098) 805 0678</span> *@
+                    @*             </li> *@
+                    @*             <li class="mb-2"> *@
+                    @*                 <span class="d-block opacity-30">Email:</span> *@
+                    @*                 <span class="d-block opacity-70"> *@
+                    @*                     <a href="mailto:dev02.ucvn@mail.com" class="text-reset">info@ouc.vn</a> *@
+                    @*                 </span> *@
+                    @*             </li> *@
+                    @*         </ul> *@
+                    @*     </div> *@
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <div class="text-center text-md-left mt-4">
+                            <h4 class="fs-16 text-uppercase fw-600 border-bottom border-gray-900 pb-2 mb-4">
+                                VỀ CHÚNG TÔI
+                            </h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#" class="opacity-50 hov-opacity-100 text-reset">
+                                        Hướng dẫn mua hàng
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="opacity-50 hov-opacity-100 text-reset">
+                                        Hướng dẫn đăng ký
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="opacity-50 hov-opacity-100 text-reset">
+                                        Hướng dẫn bán hàng
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="opacity-50 hov-opacity-100 text-reset">
+                                        Quy chế hoạt động
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="opacity-50 hov-opacity-100 text-reset">
+                                        Chính sách bảo mật
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="opacity-50 hov-opacity-100 text-reset">
+                                        Giải quyết khiếu nại
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="opacity-50 hov-opacity-100 text-reset">
+                                        Hướng dẫn tạo tài khoản và quản lý
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-2">
+                        <div class="text-center text-md-left mt-4">
+                            <h4 class="fs-16 text-uppercase fw-600 border-bottom border-gray-900 pb-2 mb-4">
+                                Tài khoản của tôi
+                            </h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a class="opacity-50 hov-opacity-100 text-reset" href="#">
+                                        Đăng nhập
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="opacity-50 hov-opacity-100 text-reset" href="#">
+                                        Lịch sử mua hàng
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="opacity-50 hov-opacity-100 text-reset" href="#">
+                                        Sản phẩm yêu thích
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="opacity-50 hov-opacity-100 text-reset" href="#">
+                                        Theo dõi đơn hàng
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="opacity-50 hov-opacity-100 text-light" href="#">Trở thành đối tác</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center text-md-left mt-4">
+                            <h4 class="fs-16 text-uppercase fw-600 border-bottom border-gray-900 pb-2 mb-4">
+                                Đăng ký bán hàng
+                            </h4>
+                            <a href="#" class="btn btn-primary btn-sm shadow-md">
+                                Đăng ký ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer class="pt-3 pb-7 pb-xl-3 bg-black text-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="text-center text-md-left" current-verison="5.5.7">
+                            <p class="p1" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: normal;" helvetica="" neue";"=""><span id="docs-internal-guid-903d34c6-7fff-350a-a11e-8a0219c75b88"><span style="font-size: 15pt; font-family: Arial; color: rgb(217, 217, 217); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span><span style="font-size: 9pt; font-family: Arial; color: rgb(217, 217, 217); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline; white-space: pre-wrap;">© 2024 - Bản quyền thuộc về </span><span style="font-size: 9pt; font-family: Arial; color: rgb(217, 217, 217); background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline; white-space: pre-wrap;">UC Việt Nam</span></span><br></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-inline my-3 my-md-0 social colored text-center">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="lab la-facebook-f"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.youtube.com" target="_blank" class="youtube"><i class="lab la-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center text-md-right">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <img src="/img/lkIc3qajJqHeaS1WB4r90ymjCP5VX85qksyMNDor.png" height="30" class="mw-100 h-auto" style="max-height: 30px">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="aiz-mobile-bottom-nav d-xl-none fixed-bottom bg-white shadow-lg border-top rounded-top" style="box-shadow: 0px -1px 10px rgb(0 0 0 / 15%)!important; ">
+            <div class="row align-items-center gutters-5">
+                <div class="col">
+                    <a href="/Trang-chu" class="text-reset d-block text-center pb-2 pt-3">
+                        <i class="las la-home fs-20 opacity-60 "></i>
+                        <span class="d-block fs-10 fw-600 opacity-60 ">Trang Chủ</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" class="text-reset d-block text-center pb-2 pt-3">
+                        <i class="las la-list-ul fs-20 opacity-60 "></i>
+                        <span class="d-block fs-10 fw-600 opacity-60 ">Thể loại</span>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="/cart" class="text-reset d-block text-center pb-2 pt-3">
+                        <span class="align-items-center bg-primary border border-white border-width-4 d-flex justify-content-center position-relative rounded-circle size-50px" style="margin-top: -33px;box-shadow: 0px -5px 10px rgb(0 0 0 / 15%);border-color: #fff !important;">
+                            <i class="las la-shopping-bag la-2x text-white"></i>
+                        </span>
+                        <span class="d-block mt-1 fs-10 fw-600 opacity-60 ">
+                            Giỏ hàng
+                            (<span class="cart-count">0</span>)
+                        </span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="/all-notifications" class="text-reset d-block text-center pb-2 pt-3">
+                        <span class="d-inline-block position-relative px-2">
+                            <i class="las la-bell fs-20 opacity-60 "></i>
+                        </span>
+                        <span class="d-block fs-10 fw-600 opacity-60 ">Thông báo</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="/users/login" class="text-reset d-block text-center pb-2 pt-3">
+                        <span class="d-block mx-auto">
+                            <img src="/img/avatar-place.png" class="rounded-circle size-20px">
+                        </span>
+                        <span class="d-block fs-10 fw-600 opacity-60">Tài khoản</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /Main Wrapper -->
+    <script>
+        function confirm_modal(delete_url) {
+            jQuery('#confirm-delete').modal('show', { backdrop: 'static' });
+            document.getElementById('delete_link').setAttribute('href', delete_url);
+        }
+    </script>
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="myModalLabel">Xác nhận</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Xác nhận xóa tin nhắn</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Huỷ bỏ</button>
+                    <a id="delete_link" class="btn btn-danger btn-ok">Xóa bỏ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addToCart">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-zoom product-modal" id="modal-size" role="document">
+            <div class="modal-content position-relative">
+                <div class="c-preloader text-center p-3">
+                    <i class="las la-spinner la-spin la-3x"></i>
+                </div>
+                <button type="button" class="close absolute-top-right btn-icon close z-1" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la-2x">×</span>
+                </button>
+                <div id="addToCart-modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-zoom" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title fw-600">Đăng nhập</h6>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true"></span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="p-3">
+                        <form class="form-default" role="form" action="/users/login/cart" method="POST">
+                            <input type="hidden" name="_token" value="Rapszq8xJNxverrIcn23lyALd25Ta0ufT7Voo3le">                            <div class="form-group">
+                                <input type="email" class="form-control h-auto form-control-lg " value="" placeholder="Email" name="email">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control h-auto form-control-lg" placeholder="Mật khẩu">
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-6">
+                                    <label class="aiz-checkbox">
+                                        <input type="checkbox" name="remember">
+                                        <span class="opacity-60">Ghi nhớ</span>
+                                        <span class="aiz-square-check"></span>
+                                    </label>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="/password/reset" class="text-reset opacity-60 fs-14">Quên mật khẩu?</a>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <button type="submit" class="btn btn-primary btn-block fw-600">Đăng nhập</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mb-3">
+                            <p class="text-muted mb-0">Bạn chưa có tài khoản?</p>
+                            <a href="/users/registration">Đăng ký ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<!-- jQuery -->
+	<script src="~/js/jquery-3.7.1.min.js"></script>
+    @* <script src="~/js/jquery-ui.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="~/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Slimscroll JS -->
+	<script src="~/js/jquery.slimscroll.min.js"></script>
+
+    <!-- slickslide -->
+    <script src="~/slick/slick.min.js"></script> 
+
+	<!-- Theme Settings JS -->
+	<script src="~/js/layout.js"></script> *@
+	@* <script src="~/js/theme-settings.js"></script> *@
+    
+
+	<!-- Custom JS -->
+	<script src="~/js/app.js"></script>
+    <script src="~/js/custom.js"></script>
+    <script type="text/javascript">
+
+        var countDownDate = new Date("Jul 20, 2024 15:37:25").getTime();
+                var i = 0;
+                // Update the count down every 1 second
+                var dateTimeCount = setInterval(function () {
+                    if (!countDownDate) {
+                        clearInterval(dateTimeCount);
+                    }
+                    // Get today's date and time
+                    var now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Output the result in an element
+                    if (days <= 0) {
+                        $('#odometer-days').remove();
+                        $('.days-colon').remove();
+                    } else {
+                        $('#odometer-days').html(days);
+                    }
+                    $('#odometer-hours').html(hours);
+                    $('#odometer-minutes').html(minutes);
+                    $('#odometer-seconds').html(seconds);
+
+                    if (distance < 0) {
+                        clearInterval(dateTimeCount);
+                        $('.activity-wrap').css('display', 'none');
+                        //location.reload();
+                    }
+                }, 1000);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.category-nav-element').each(function (i, el) {
+                $(el).on('mouseover', function () {
+                    if (!$(el).find('.sub-cat-menu').hasClass('loaded')) {
+                        $.post('https://chonongsanonline.com/category/nav-element-list', {
+                            _token: AIZ.data.csrf,
+                            id: $(el).data('id')
+                        }, function (data) {
+                            $(el).find('.sub-cat-menu').addClass('loaded').html(data);
+                        });
+                    }
+                });
+            });
+            if ($('#lang-change').length > 0) {
+                $('#lang-change .dropdown-menu a').each(function () {
+                    $(this).on('click', function (e) {
+                        e.preventDefault();
+                        var $this = $(this);
+                        var locale = $this.data('flag');
+                        $.post('https://chonongsanonline.com/language', {
+                            _token: AIZ.data.csrf,
+                            locale: locale
+                        }, function (data) {
+                            location.reload();
+                        });
+
+                    });
+                });
+            }
+
+            if ($('#currency-change').length > 0) {
+                $('#currency-change .dropdown-menu a').each(function () {
+                    $(this).on('click', function (e) {
+                        e.preventDefault();
+                        var $this = $(this);
+                        var currency_code = $this.data('currency');
+                        $.post('https://chonongsanonline.com/currency', {
+                            _token: AIZ.data.csrf,
+                            currency_code: currency_code
+                        }, function (data) {
+                            location.reload();
+                        });
+
+                    });
+                });
+            }
+        });
+
+        $('#search').on('keyup', function () {
+            search();
+        });
+
+        $('#search').on('focus', function () {
+            search();
+        });
+
+        function search() {
+            var searchKey = $('#search').val();
+            if (searchKey.length > 0) {
+                $('body').addClass("typed-search-box-shown");
+
+                $('.typed-search-box').removeClass('d-none');
+                $('.search-preloader').removeClass('d-none');
+                $.post('#', {
+                    _token: AIZ.data.csrf,
+                    search: searchKey
+                }, function (data) {
+                    if (data == '0') {
+                        // $('.typed-search-box').addClass('d-none');
+                        $('#search-content').html(null);
+                        $('.typed-search-box .search-nothing').removeClass('d-none').html(
+                            'Sorry, nothing found for <strong>"' + searchKey + '"</strong>');
+                        $('.search-preloader').addClass('d-none');
+
+                    } else {
+                        $('.typed-search-box .search-nothing').addClass('d-none').html(null);
+                        $('#search-content').html(data);
+                        $('.search-preloader').addClass('d-none');
+                    }
+                });
+            } else {
+                $('.typed-search-box').addClass('d-none');
+                $('body').removeClass("typed-search-box-shown");
+            }
+        }
+
+        function updateNavCart(view, count) {
+            $('.cart-count').html(count);
+            $('#cart_items').html(view);
+        }
+
+        function removeFromCart(key) {
+            $.post('/cart/removefromcart', {
+                //_token: AIZ.data.csrf,
+                id: key
+            }, function (data) {
+                updateNavCart(data.nav_cart_view, data.cart_count);
+                $('#cart-summary').html(data.cart_view);
+                AIZ.plugins.notify('success', "Mặt hàng đã được xóa khỏi giỏ hàng");
+                $('#cart_items_sidenav').html(parseInt($('#cart_items_sidenav').html()) - 1);
+            });
+        }
+
+        function addToCompare(id) {
+            $.post('#', {
+                _token: AIZ.data.csrf,
+                id: id
+            }, function (data) {
+                $('#compare').html(data);
+                AIZ.plugins.notify('success', "Đã thêm vào danh sách so sánh");
+                $('#compare_items_sidenav').html(parseInt($('#compare_items_sidenav').html()) + 1);
+            });
+        }
+
+        function addToWishList(id) {
+            AIZ.plugins.notify('warning', "Vui lòng đăng nhập");
+        }
+
+        function showAddToCartModal(id) {
+            if (!$('#modal-size').hasClass('modal-lg')) {
+                $('#modal-size').addClass('modal-lg');
+            }
+            $('#addToCart-modal-body').html(null);
+            $('#addToCart').modal('show');
+            $('.c-preloader').show();
+            $.post('/cart/show-cart-modal', {
+                //_token: AIZ.data.csrf,
+                id: id
+            }, function (data) {
+                $('.c-preloader').hide();
+                $('#addToCart-modal-body').html(data);
+                AIZ.plugins.slickCarousel();
+                AIZ.plugins.zoom();
+                AIZ.extra.plusMinus();
+                getVariantPrice();
+            });
+
+        }
+
+        $('#option-choice-form input').on('change', function () {
+            getVariantPrice();
+        });
+
+        function getVariantPrice() { 
+            var data = $('#option-choice-form').serializeArray()
+            $('#option-choice-form #chosen_price_div').removeClass('d-none');
+            $('#option-choice-form #chosen_price_div #chosen_price').html(data.price);
+            //$('#available-quantity').html(data.quantity);
+            $('.input-number').prop('max', data.max_limit);
+            if (parseInt(data.in_stock) == 0 && data.digital == 0) {
+                $('.buy-now').addClass('d-none');
+                $('.add-to-cart').addClass('d-none');
+                $('.out-of-stock').removeClass('d-none');
+            } else {
+                $('.buy-now').removeClass('d-none');
+                $('.add-to-cart').removeClass('d-none');
+                $('.out-of-stock').addClass('d-none');
+            }
+        }
+
+        // function getVariantPrice() {
+        //     if ($('#option-choice-form input[name=quantity]').val() > 0 && checkAddToCartValidity()) {
+        //         $.ajax({
+        //             type: "POST",
+        //             url: '#',
+        //             data: $('#option-choice-form').serializeArray(),
+        //             success: function (data) {
+
+        //                 $('.product-gallery-thumb .carousel-box').each(function (i) {
+        //                     if ($(this).data('variation') && data.variation == $(this).data(
+        //                         'variation')) {
+        //                         $('.product-gallery-thumb').slick('slickGoTo', i);
+        //                     }
+        //                 })
+
+        //                 $('#option-choice-form #chosen_price_div').removeClass('d-none');
+        //                 $('#option-choice-form #chosen_price_div #chosen_price').html(data.price);
+        //                 $('#available-quantity').html(data.quantity);
+        //                 $('.input-number').prop('max', data.max_limit);
+        //                 if (parseInt(data.in_stock) == 0 && data.digital == 0) {
+        //                     $('.buy-now').addClass('d-none');
+        //                     $('.add-to-cart').addClass('d-none');
+        //                     $('.out-of-stock').removeClass('d-none');
+        //                 } else {
+        //                     $('.buy-now').removeClass('d-none');
+        //                     $('.add-to-cart').removeClass('d-none');
+        //                     $('.out-of-stock').addClass('d-none');
+        //                 }
+        //             }
+        //         });
+        //     }
+        // }
+
+        function checkAddToCartValidity() {
+            var names = {};
+            $('#option-choice-form input:radio').each(function () { // find unique names
+                names[$(this).attr('name')] = true;
+            });
+            var count = 0;
+            $.each(names, function () { // then count them
+                count++;
+            });
+
+            if ($('#option-choice-form input:radio:checked').length == count) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function addToCart() {
+             if (checkAddToCartValidity()) {
+                $('#addToCart').modal();
+                $('.c-preloader').show();
+                 var data = $('#option-choice-form').serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: "/cart/addtocart",
+                    contentType: "application/json; charset=utf-8",
+                    // dataType: "json",
+                    data: JSON.stringify($('#option-choice-form').serializeArray()),
+                    success: function (data) {
+                        $('#addToCart-modal-body').html(null);
+                        $('.c-preloader').hide();
+                        $('#modal-size').removeClass('modal-lg');
+                        $('#addToCart-modal-body').html(data.modal_view);
+                        AIZ.extra.plusMinus();
+                        AIZ.plugins.slickCarousel();
+                        updateNavCart(data.nav_cart_view, data.cart_count);
+                    },
+                    error: function (xhr, status, error) {
+                        var errorMessage = "An error occurred: " + xhr.status + " " + xhr.statusText;
+                        alert(errorMessage);
+                        console.log("Error details:", xhr.responseText);
+                    }
+                });
+            } else {
+                AIZ.plugins.notify('warning', "Vui lòng chọn tất cả các tùy chọn");
+            }
+        }
+        function add_new_address() {
+            $('#new-address-modal').modal('show');
+        }
+        function submitAddress () {
+            //if ($('#option-choice-form').checkValidity()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/add-address",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify($('#option-choice-form').serializeArray()),
+                    success: function (data) {
+                        $('#info-addresses').html(null);
+                        $('#new-address-modal').modal('hide');
+                        $('#info-addresses').html(data.modal_view);
+                    },
+                    error: function (xhr, status, error) {
+                        var errorMessage = "An error occurred: " + xhr.status + " " + xhr.statusText;
+                        alert(errorMessage);
+                        console.log("Error details:", xhr.responseText);
+                    }
+                });
+            // }else{
+            //     $('#option-choice-form').reportValidity();
+            // }
+        }
+        function showModalAdress(id) {
+            $.ajax({
+                type: "GET",
+                url: "/show-modal-edit-address/" + id,
+                success: function (data) {
+                    $('#edit_modal_body').html(data.modal_view);
+                    $('#edit-address-modal').modal('show');
+                    AIZ.plugins.bootstrapSelect('refresh');
+                },
+                error: function (xhr, status, error) {
+                    var errorMessage = "An error occurred: " + xhr.status + " " + xhr.statusText;
+                    alert(errorMessage);
+                    console.log("Error details:", xhr.responseText);
+                }
+            });
+
+        }
+        function editAddress() {
+            $.ajax({
+                type: "POST",
+                url: "/edit-address",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify($('#option-choice-form1').serializeArray()),
+                success: function (data) {
+                    $('#info-addresses').html(null);
+                    $('#edit-address-modal').modal('hide');
+                    $('#info-addresses').html(data.modal_view);
+                },
+                error: function (xhr, status, error) {
+                    var errorMessage = "An error occurred: " + xhr.status + " " + xhr.statusText;
+                    alert(errorMessage);
+                    console.log("Error details:", xhr.responseText);
+                }
+            });
+
+        }
+        function removeAddress(id) {
+            // $('#new-address-modal').modal('hide');
+            // $(".aiz-steps .col").removeClass("active");
+            // $(".aiz-steps .col").removeClass("done");
+            // $(".aiz-steps .col:eq(1)").addClass("active");
+            $.ajax({
+                type: "POST",
+                url: "/remove-address/" + id,
+                success: function (data) {
+                    $('#info-addresses').html(null);
+                    $('#new-address-modal').modal('hide');
+                    $('#info-addresses').html(data.modal_view);
+                },
+                error: function (xhr, status, error) {
+                    var errorMessage = "An error occurred: " + xhr.status + " " + xhr.statusText;
+                    alert(errorMessage);
+                    console.log("Error details:", xhr.responseText);
+                }
+            });
+
+        }
+        function buyNow() {
+            //$('#addToCart-modal-body').html(null);
+            // $('#addToCart').modal();
+            // $('.c-preloader').show();
+            $.ajax({
+                type: "POST",
+                url: "/cart/addtocart",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify($('#option-choice-form').serializeArray()),
+                success: function (data) {
+                    // if (data.status == 1) {
+                        if ($('#option-choice-form input[name=digital]').val() == 1) {
+                            window.location.replace("/cart");
+                            return;
+                        }
+                        $('#addToCart-modal-body').html(data.modal_view);
+                        updateNavCart(data.nav_cart_view, data.cart_count);
+                    window.location.replace("/cart");
+                    // } else {
+                    //     $('#addToCart-modal-body')
+                    // }
+                },
+                error: function (xhr, status, error) {
+                    console.error('AJAX request failed:', status, error);
+                }
+            });
+        }
+
+     </script>
+    <script type="text/javascript">
+        function add_new_address() {
+            $('#new-address-modal').modal('show');
+        }
+
+        function edit_address(address) {
+
+            var url = '/addresses/:id/edit';
+            url = url.replace(':id', address);
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: url,
+                type: 'GET',
+                success: function (response) {
+                    $('#edit_modal_body').html(response.html);
+                    $('#edit-address-modal').modal('show');
+                    AIZ.plugins.bootstrapSelect('refresh');
+
+                }
+            });
+        }
+
+        // $(document).on('change', '[name=country_id]', function () {
+        //     var country_id = $(this).val();
+        //     get_provinces(country_id);
+        // });
+
+        $(document).on('change', '[name=province_id]', function () {
+            var province_id = $(this).val();
+            get_districts(province_id);
+        });
+
+        $(document).on('change', '[name=district_id]', function () {
+            var district_id = $(this).val();
+            get_wards(district_id);
+        });
+
+        function get_provinces() {
+            $('[name="province"]').html("");
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "/get-provinces",
+                type: 'POST',
+                success: function (response) {
+                    if (response != '') {
+                        $('[name="province_id"]').html(response);
+                        AIZ.plugins.bootstrapSelect('refresh');
+                    }
+                }
+            });
+        }
+        //get_provinces();
+        function get_districts(province_id) {
+            $('[name="district"]').html("");
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "/get-districts",
+                type: 'POST',
+                data: {
+                    province_id: province_id
+                },
+                success: function (response) {
+                    if (response != '') {
+                        $('[name="district_id"]').html(response);
+                        AIZ.plugins.bootstrapSelect('refresh');
+                    }
+                }
+            });
+        }
+
+
+
+        function get_wards(district_id) {
+            $('[name="ward"]').html("");
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "/get-wards",
+                type: 'POST',
+                data: {
+                    district_id: district_id
+                },
+                success: function (response) {
+                    if (response != '') {
+                        $('[name="ward_id"]').html(response);
+                        AIZ.plugins.bootstrapSelect('refresh');
+                    }
+                }
+            });
+        }
+    </script>
+    <style>
+        .odometer-inside{
+            display:none;
+        }
+    </style>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

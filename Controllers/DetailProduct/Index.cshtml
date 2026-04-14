@@ -1,0 +1,1103 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="modal fade" id="order_details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div id="order-details-modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<section class="mb-4 pt-3">
+    <div class="container">
+        <div class="bg-white shadow-sm rounded p-3">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 mb-4">
+                    <div class="sticky-top z-3 row gutters-10">
+                        <div class="col order-1 order-md-2">
+                            <div class="aiz-carousel product-gallery slick-initialized slick-slider" data-nav-for=".product-gallery-thumb" data-fade="true" data-auto-height="true">
+                                <div class="slick-list draggable" style="height: 465.9px;">
+                                    <div class="slick-track" style="opacity: 1; width: 920px;">
+                                        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 460px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
+                                            <div>
+                                                <div class="carousel-box img-zoom rounded" style="width: 100%; display: inline-block; position: relative; overflow: hidden;">
+                                                    <img class="img-fluid ls-is-cached lazyloaded" src="~/img/products/ngongot1.jfif" data-src="/uploads/all/lFXsAwXvCGAWCAoZfChhfL2KFr8SjQtTDDOq2ASp.png" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                    <img role="presentation" alt="" src="~/img/products/ngongot1.jfif" class="zoomImg" style="position: absolute; top: -24.9179px; left: -89.1435px; opacity: 0; width: 750px; height: 750px; border: none; max-width: none; max-height: none;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 460px; position: relative; left: -460px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1">
+                                            <div>
+                                                <div class="carousel-box img-zoom rounded" style="width: 100%; display: inline-block; position: relative; overflow: hidden;">
+                                                    <img class="img-fluid ls-is-cached lazyloaded" src="~/img/products/ngongot2.jfif" data-src="/uploads/all/UXOl3gfanUVJ5uu9FGHW9D8gSXSAgnxToPHmtuHv.png" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                    <img role="presentation" alt="" src="~/img/products/ngongot2.jfif" class="zoomImg" style="position: absolute; top: 0px; left: 0px; opacity: 0; width: 750px; height: 750px; border: none; max-width: none; max-height: none;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 460px; position: relative; left: -460px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1">
+                                            <div>
+                                                <div class="carousel-box img-zoom rounded" style="width: 100%; display: inline-block; position: relative; overflow: hidden;">
+                                                    <img class="img-fluid ls-is-cached lazyloaded" src="~/img/products/ngongot3.jfif" data-src="/uploads/all/UXOl3gfanUVJ5uu9FGHW9D8gSXSAgnxToPHmtuHv.png" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                    <img role="presentation" alt="" src="~/img/products/ngongot3.jfif" class="zoomImg" style="position: absolute; top: 0px; left: 0px; opacity: 0; width: 750px; height: 750px; border: none; max-width: none; max-height: none;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-auto w-md-80px order-2 order-md-1 mt-3 mt-md-0">
+                            <div class="aiz-carousel product-gallery-thumb slick-initialized slick-slider slick-vertical" data-items="7" data-nav-for=".product-gallery" data-vertical="true" data-vertical-sm="false" data-focus-select="true" data-arrows="true">
+                                <div class="slick-list draggable" style="height: 480.9px;">
+                                    <div class="slick-track" style="opacity: 1; height: 138px; transform: translate3d(0px, 0px, 0px);">
+                                        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 60px;">
+                                            <div>
+                                                <div class="carousel-box c-pointer border p-1 rounded" style="width: 100%; display: inline-block;">
+                                                    <img class="mw-100 size-50px mx-auto ls-is-cached lazyloaded" src="~/img/products/ngongot1.jfif" data-src="/uploads/all/lFXsAwXvCGAWCAoZfChhfL2KFr8SjQtTDDOq2ASp.png" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                </div>
+                                            </div>
+                                        </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 60px;">
+                                            <div>
+                                                <div class="carousel-box c-pointer border p-1 rounded" style="width: 100%; display: inline-block;">
+                                                    <img class="mw-100 size-50px mx-auto ls-is-cached lazyloaded" src="~/img/products/ngongot2.jfif" data-src="/uploads/all/UXOl3gfanUVJ5uu9FGHW9D8gSXSAgnxToPHmtuHv.png" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                </div>
+                                            </div>
+                                        </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 60px;">
+                                            <div>
+                                                <div class="carousel-box c-pointer border p-1 rounded" style="width: 100%; display: inline-block;">
+                                                    <img class="mw-100 size-50px mx-auto ls-is-cached lazyloaded" src="~/img/products/ngongot3.jfif" data-src="/uploads/all/UXOl3gfanUVJ5uu9FGHW9D8gSXSAgnxToPHmtuHv.png" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                </div>
+                                            </div>
+                                        </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 60px;">
+                                            <div>
+                                                <div class="carousel-box c-pointer border p-1 rounded" style="width: 100%; display: inline-block;">
+                                                    <img class="mw-100 size-50px mx-auto ls-is-cached lazyloaded" src="~/img/products/chungnhan.jpg" data-src="/uploads/all/UXOl3gfanUVJ5uu9FGHW9D8gSXSAgnxToPHmtuHv.png" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-7 col-lg-6">
+                    <div class="text-left">
+                        <h1 class="mb-2 fs-20 fw-600">
+                            Ngô ngọt nguyên hạt - Ngô Ngọt nguyên hạt AS
+                        </h1>
+
+                        <div class="row align-items-center" style="margin-top:14px;">
+                            <div class="col-12">
+                                <span class="rating">
+                                    <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                </span>
+                                <span class="ml-1 opacity-50">
+                                    (0
+                                    Đánh giá)
+                                </span>
+                            </div>
+                        </div>
+
+                        <hr style="margin-top:18px;">
+
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                                <small class="mr-2 opacity-50">Được bán bởi: </small><br>
+                                <a href="/detailproduct" class="text-reset">Công ty thực phẩm Dũng Hà</a>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-sm btn-soft-primary" onclick="show_chat_modal()">Chat với Người bán</button>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="row no-gutters mt-3">
+                            <div class="col-sm-2">
+                                <div class="opacity-50 my-2">Giá bán:</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="">
+                                    <strong class="h2 fw-600 text-primary">
+                                        25,000 VND
+                                    </strong>
+                                    <span class="opacity-70">/Hộp</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <hr>
+
+                        <form id="option-choice-form">
+                            <input type="hidden" name="_token" value="TbTOAsxlbGF76jRH4aksgWpsuHDxEBznz2hNl3NN">                                <input type="hidden" name="id" value="15748">
+
+
+
+                            <!-- Quantity + Add to cart -->
+                            <div class="row no-gutters">
+                                <div class="col-sm-2">
+                                    <div class="opacity-50 my-2">Số lượng:</div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="product-quantity d-flex align-items-center">
+                                        <div class="row no-gutters align-items-center aiz-plus-minus mr-3" style="width: 130px;">
+                                            <button class="btn col-auto btn-icon btn-sm btn-circle btn-light" type="button" data-type="minus" data-field="quantity" disabled="disabled">
+                                                <i class="las la-minus"></i>
+                                            </button>
+                                            <input type="number" name="quantity" class="col border-0 text-center flex-grow-1 fs-16 input-number" placeholder="20" value="20" min="1" max="50" lang="en">
+                                            <button class="btn  col-auto btn-icon btn-sm btn-circle btn-light" type="button" data-type="plus" data-field="quantity">
+                                                <i class="las la-plus"></i>
+                                            </button>
+                                        </div>
+                                        <div class="avialable-amount opacity-60">
+                                            (<span id="available-quantity">50</span>
+                                            Còn hàng)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row no-gutters pb-3" id="chosen_price_div">
+                                <div class="col-sm-2">
+                                    <div class="opacity-50 my-2">Tổng giá:</div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="product-price">
+                                        <strong id="chosen_price" class="h4 fw-600 text-primary">500,000 VND</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-soft-primary mr-2 add-to-cart fw-600" onclick="addToCart()">
+                                <i class="las la-shopping-bag"></i>
+                                <span class="d-none d-md-inline-block">
+                                    Thêm vào giỏ hàng
+                                </span>
+                            </button>
+                            <button type="button" class="btn btn-primary buy-now fw-600" onclick="window.location.href='/cart'">
+                                <i class="la la-shopping-cart"></i> Mua ngay
+                            </button>
+                            <button type="button" class="btn btn-secondary out-of-stock fw-600 d-none" disabled="">
+                                <i class="la la-cart-arrow-down"></i> Hết hàng
+                            </button>
+                        </div>
+
+
+
+                        <div class="d-table width-100 mt-3">
+                            <div class="d-table-cell">
+                                <!-- Add to wishlist button -->
+                                <button type="button" class="btn pl-0 btn-link fw-600" onclick="addToWishList(15748)">
+                                    Thêm vào danh sách yêu thích
+                                </button>
+                                <!-- Add to compare button -->
+
+                            </div>
+                        </div>
+
+
+                        <div class="row no-gutters mt-4 justify-content-center align-items-center">
+                            <div class="col-sm-2">
+                                <div class="opacity-50 my-2">Chia sẻ:</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="aiz-share jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-email"><a target="_self" href="" class="jssocials-share-link"><i class="lab la-whatsapp jssocials-share-logo"></i></a></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-4">
+    <div class="container">
+        <div class="row gutters-10">
+            <div class="col-xl-12 order-0 order-xl-0 block">
+                <div class="bg-white shadow-sm mb-4">
+                    <div class="product-well p-3 pb-5">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-12">
+                                <h3 class="fs-16 fw-600 border-bottom pb-3 mb-3">
+                                    <span>Đặc điểm nổi bật</span>
+                                </h3>
+                                <div class="wysiwyg">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-12">
+                                <h3 class="fs-16 fw-600 border-bottom pb-3 mb-3">
+                                    <span>Điều kiện sử sụng</span>
+                                </h3>
+                                <div class="wysiwyg">
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-default btn-view-more">
+                            <span class="more-text">Xem thêm <i class="la la-chevron-down"></i></span>
+                            <span class="less-text">Thu gọn <i class="la la-chevron-up"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 order-1 order-xl-0">
+                <div class="bg-white shadow-sm mb-3">
+                    <div class="position-relative p-3 text-left">
+                        <div class="absolute-top-right p-2 bg-white z-1">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 287.5 442.2" width="22" height="34">
+                            <polygon style="fill:#F8B517;" points="223.4,442.2 143.8,376.7 64.1,442.2 64.1,215.3 223.4,215.3 "></polygon>
+                            <circle style="fill:#FBD303;" cx="143.8" cy="143.8" r="143.8"></circle>
+                            <circle style="fill:#F8B517;" cx="143.8" cy="143.8" r="93.6"></circle>
+                            <polygon style="fill:#FCFCFD;" points="143.8,55.9 163.4,116.6 227.5,116.6 175.6,154.3 195.6,215.3 143.8,177.7 91.9,215.3 111.9,154.3
+                                            60,116.6 124.1,116.6 "></polygon>
+                                        </svg>
+                        </div>
+                        <div class="opacity-50 fs-12 border-bottom">Được bán bởi</div>
+                        <a href="/detailproduct" class="text-reset d-block fw-600">
+                            Công ty thực phẩm Dũng Hà
+                            <span class="ml-2"><i class="fa fa-check-circle" style="color:green"></i></span>
+                        </a>
+                        <div class="location opacity-70">
+                            số 5 Trung Mỹ Tây 13
+                            , PHƯỜNG TRUNG MỸ TÂY
+                            , QUẬN 12
+                            , TP. Hồ Chí Minh
+                        </div>
+                        <div class="text-center border rounded p-2 mt-3">
+                            <div class="rating">
+                                <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                            </div>
+                            <div class="opacity-60 fs-12">
+                                (0
+                                Phản hồi khách hàng)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters align-items-center border-top left-social">
+                        <div class="col">
+                            <a href="/detailproduct" class="d-block btn btn-soft-primary rounded-0">Xem gian hàng</a>
+                        </div>
+                        <div class="col">
+                            <ul class="social list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <a href="/detailproduct" class="facebook" target="_blank">
+                                        <i class="lab la-facebook-f opacity-60"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="/detailproduct" class="instagram" target="_blank">
+                                        <i class="lab la-instagram opacity-60"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="/detailproduct" class="website" target="_blank">
+                                        <i class="las la-globe opacity-60"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded shadow-sm mb-3">
+                    <div class="p-3 border-bottom fs-16 fw-600">
+                        Sản phẩm bán chạy nhất
+                    </div>
+                    <div class="p-3">
+                        <ul class="list-group list-group-flush">
+                            <li class="py-3 px-0 list-group-item border-light">
+                                <div class="row gutters-10 align-items-center">
+                                    <div class="col-5">
+                                        <a href="/detailproduct" class="d-block text-reset">
+                                            <img class="img-fit h-xxl-110px h-xl-80px h-120px ls-is-cached lazyloaded" src="/uploads/all/2tiVikzfnv1wwCtfu3yO0wyZyMB3NHfPBAYeZbXi.png" data-src="/uploads/all/2tiVikzfnv1wwCtfu3yO0wyZyMB3NHfPBAYeZbXi.png" alt="Khô cá mú nướng Phan Thiết thịt săn chắc thơm lừng quyến rũ 1kg | CMU | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        </a>
+                                    </div>
+                                    <div class="col-7 text-left">
+                                        <h4 class="fs-14">
+                                            <a href="/detailproduct" class="d-block text-reset">Khô cá mú nướng Phan Thiết thịt săn chắc thơm lừng quyến rũ 1kg | CMU | Vài Ly Đê</a>
+                                        </h4>
+                                        <div class="rating rating-sm mt-1">
+                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="fs-17 fw-600 text-primary">400,000 VND</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-3 px-0 list-group-item border-light">
+                                <div class="row gutters-10 align-items-center">
+                                    <div class="col-5">
+                                        <a href="/detailproduct" class="d-block text-reset">
+                                            <img class="img-fit h-xxl-110px h-xl-80px h-120px ls-is-cached lazyloaded" src="/uploads/all/2tiVikzfnv1wwCtfu3yO0wyZyMB3NHfPBAYeZbXi.png" data-src="/uploads/all/2tiVikzfnv1wwCtfu3yO0wyZyMB3NHfPBAYeZbXi.png" alt="Khô cá mú nướng Phan Thiết thịt săn chắc thơm lừng quyến rũ 500gram | CMU | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        </a>
+                                    </div>
+                                    <div class="col-7 text-left">
+                                        <h4 class="fs-14">
+                                            <a href="/detailproduct" class="d-block text-reset">Khô cá mú nướng Phan Thiết thịt săn chắc thơm lừng quyến rũ 500gram | CMU | Vài Ly Đê</a>
+                                        </h4>
+                                        <div class="rating rating-sm mt-1">
+                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="fs-17 fw-600 text-primary">250,000 VND</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-3 px-0 list-group-item border-light">
+                                <div class="row gutters-10 align-items-center">
+                                    <div class="col-5">
+                                        <a href="/detailproduct" class="d-block text-reset">
+                                            <img class="img-fit h-xxl-110px h-xl-80px h-120px lazyloaded" src="/uploads/all/WDm1Fb5ukLXaQJgXlW8ONfdjZpRMHOCBOei6Tikb.png" data-src="/uploads/all/WDm1Fb5ukLXaQJgXlW8ONfdjZpRMHOCBOei6Tikb.png" alt="Khô cá chỉ vàng Cà Mau một nắng, mặn ngọt hài hòa 500gram | CV | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        </a>
+                                    </div>
+                                    <div class="col-7 text-left">
+                                        <h4 class="fs-14">
+                                            <a href="/detailproduct" class="d-block text-reset">Khô cá chỉ vàng Cà Mau một nắng, mặn ngọt hài hòa 500gram | CV | Vài Ly Đê</a>
+                                        </h4>
+                                        <div class="rating rating-sm mt-1">
+                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="fs-17 fw-600 text-primary">400,000 VND</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-3 px-0 list-group-item border-light">
+                                <div class="row gutters-10 align-items-center">
+                                    <div class="col-5">
+                                        <a href="/detailproduct" class="d-block text-reset">
+                                            <img class="img-fit h-xxl-110px h-xl-80px h-120px lazyloaded" src="/uploads/all/WDm1Fb5ukLXaQJgXlW8ONfdjZpRMHOCBOei6Tikb.png" data-src="/uploads/all/WDm1Fb5ukLXaQJgXlW8ONfdjZpRMHOCBOei6Tikb.png" alt="Khô cá chỉ vàng Cà Mau một nắng, mặn ngọt hài hòa 200gram | CV | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        </a>
+                                    </div>
+                                    <div class="col-7 text-left">
+                                        <h4 class="fs-14">
+                                            <a href="/detailproduct" class="d-block text-reset">Khô cá chỉ vàng Cà Mau một nắng, mặn ngọt hài hòa 200gram | CV | Vài Ly Đê</a>
+                                        </h4>
+                                        <div class="rating rating-sm mt-1">
+                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="fs-17 fw-600 text-primary">200,000 VND</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-3 px-0 list-group-item border-light">
+                                <div class="row gutters-10 align-items-center">
+                                    <div class="col-5">
+                                        <a href="/detailproduct" class="d-block text-reset">
+                                            <img class="img-fit h-xxl-110px h-xl-80px h-120px ls-is-cached lazyloaded" src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Ngô ngọt nguyên hạt - Ngô Ngọt nguyên hạt" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        </a>
+                                    </div>
+                                    <div class="col-7 text-left">
+                                        <h4 class="fs-14">
+                                            <a href="/detailproduct" class="d-block text-reset">Ngô ngọt nguyên hạt - Ngô Ngọt nguyên hạt AS | LGB | Vài Ly Đê</a>
+                                        </h4>
+                                        <div class="rating rating-sm mt-1">
+                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="fs-17 fw-600 text-primary">456,000 VND</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-3 px-0 list-group-item border-light">
+                                <div class="row gutters-10 align-items-center">
+                                    <div class="col-5">
+                                        <a href="/detailproduct" class="d-block text-reset">
+                                            <img class="img-fit h-xxl-110px h-xl-80px h-120px ls-is-cached lazyloaded" src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Ngô ngọt nguyên hạt - Ngô Ngọt nguyên hạt AS" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        </a>
+                                    </div>
+                                    <div class="col-7 text-left">
+                                        <h4 class="fs-14">
+                                            <a href="/detailproduct" class="d-block text-reset">Bắp Ngô ngọt</a>
+                                        </h4>
+                                        <div class="rating rating-sm mt-1">
+                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="fs-17 fw-600 text-primary">18,000 VND</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 order-0 order-xl-1">
+                <div class="bg-white mb-3 shadow-sm rounded">
+                    <div class="nav border-bottom aiz-nav-tabs">
+                        <a href="#tab_default_1" data-toggle="tab" class="p-3 fs-16 fw-600 text-reset active show">Mô tả</a>
+
+                        <a href="#tab_default_4" data-toggle="tab" class="p-3 fs-16 fw-600 text-reset">Đánh giá</a>
+                    </div>
+
+                    <div class="tab-content pt-0">
+                        <div class="tab-pane fade active show" id="tab_default_1">
+                            <div class="p-4">
+                                <div class="mw-100 overflow-hidden text-left aiz-editor-data">
+                                "/DetailProduct/Index.cshtml
+                                    <p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">
+                                        <span style="font-weight: bolder;">Ngô ngọt nguyên hạt - Ngô Ngọt nguyên hạt AS</span>
+                                        </p>
+                                    <p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">Được sơ chế từ những hạt bắp tươi ngon, ngọt, mát, bùi mang lại cảm giác thú vị cho người thưởng thức, sản phẩm an toàn cho sức khỏe người sử dụng.</p>
+                                    <h2 style="text-rendering: optimizespeed; color: rgb(209, 92, 17); margin-bottom: 0.5em; width: 854.2px; line-height: 1.3; font-size: 1.6em; font-family: Asap, sans-serif; font-weight: 700;">
+                                        <span style="font-weight: bolder;">Thông Tin Sản Phẩm:</span></h2><ul style="list-style-position: initial; list-style-image: initial; padding: 0px; margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">
+                                        <li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Tên sản phẩm</span>: Ngô ngọt nguyên hạt - Ngô Ngọt nguyên hạt AS</li>
+                                        <li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Xuất xứ</span>: Công ty thực phẩm Dũng Hà</li>
+                                        <li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Đóng gói</span>: Hộp</li>
+                                    </ul><h2 style="text-rendering: optimizespeed; color: rgb(209, 92, 17); margin-bottom: 0.5em; width: 854.2px; line-height: 1.3; font-size: 1.6em; font-family: Asap, sans-serif; font-weight: 700;">
+                                        <span style="font-weight: bolder;">Mô Tả Sản Phẩm:</span>
+                                    </h2><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">
+                                        Ngô ngọt đóng hộp đảm bảo an toàn vệ sinh thực phẩm được chế biến theo quy trình tiêu chuẩn.<br/>
+                                        + Thành phần : Ngô ngọt, Nước, Đường mía, Muối ăn.<br />
+                                        + Trọng lượng tĩnh : 450gr. Trọng lượng cái : 230gr.<br />
+                                        + Sử dụng : Ăn liền, chiên bơ, đồ xôi, rang cơm, nấu canh, nấu chè và các món ăn khác.<br />
+                                        + Hạn sử dụng : 2 năm kể từ ngày SX .Ngày sản xuất và hạn sử dụng ghi trên bao bì.<br />
+                                        + Bảo quản : Bảo quản nơi khô ráo thoáng mát, tránh ánh nắng. Bảo quản lạnh sau khi mở và sử dụng .<br />
+                                    </p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">
+                                        <span style="font-weight: bolder;">Ưu Điểm Nổi Bật</span>:</p>
+                                        <ul style="list-style-position: initial; list-style-image: initial; padding: 0px; margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;"><li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;">
+                                            <span style="font-weight: bolder;">Hương vị đặc trưng</span>: Ngô ngọt có hương vị thơm ngon, đậm đà.</li><li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;">
+                                                <span style="font-weight: bolder;">Chất lượng cao</span>: Sản phẩm được làm từ ngô không biến đổi gen, không chứa chất bảo quản hay phụ gia.</li>
+                                                <li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Dinh dưỡng</span>: Ngô ngọt giàu protein và các khoáng chất cần thiết, tốt cho sức khỏe.</li></ul><h2 style="text-rendering: optimizespeed; color: rgb(209, 92, 17); margin-bottom: 0.5em; width: 854.2px; line-height: 1.3; font-size: 1.6em; font-family: Asap, sans-serif; font-weight: 700;"><span style="font-weight: bolder;">Cách Sử Dụng:</span></h2><ul style="list-style-position: initial; list-style-image: initial; padding: 0px; margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;"><li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Ăn trực tiếp</span>: Là món ăn vặt giàu dinh dưỡng, phù hợp cho mọi lứa tuổi.</li><li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Chế biến món ăn</span>: Có thể kết hợp với các loại rau củ và gia vị để tạo nên các món ăn ngon miệng và bổ dưỡng.</li></ul><h2 style="text-rendering: optimizespeed; color: rgb(209, 92, 17); margin-bottom: 0.5em; width: 854.2px; line-height: 1.3; font-size: 1.6em; font-family: Asap, sans-serif; font-weight: 700;"><span style="font-weight: bolder;">Cách Bảo Quản:</span></h2><ul style="list-style-position: initial; list-style-image: initial; padding: 0px; margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;"><li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Bảo quản nơi khô ráo, thoáng mát</span>: Để thịt trâu gác bếp ở nơi khô ráo và thoáng mát để giữ được độ giòn và hương vị lâu dài.</li><li aria-level="1" style="margin-bottom: 0.6em; margin-left: 1.3em;"><span style="font-weight: bolder;">Sử dụng trong thời gian ngắn sau khi mở bao bì</span>: Để đảm bảo chất lượng, nên sử dụng sản phẩm trong vòng một tuần sau khi mở bao bì.</li></ul><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">Thời gian vận chuyển cho đơn Thịt trâu gác bếp:</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">+ Nội thành TP.HCM: 1 đến 2 hôm</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">+ Các tỉnh ngoại thành : 3 đến 5 hôm</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">+ Hỗ trợ hỏa tốc: 1 giờ đến 3 giờ</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">**VÀI LY ĐÊ CAM KẾT VỚI KHÁCH HÀNG:</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Sản phẩm giống mô tả.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Nguyên liệu thực phẩm tươi sạch, không chất bảo quản.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Đơn hàng được giao từ 1-5 ngày kể từ ngày đặt hàng.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Trả hàng nếu sản phẩm bị lỗi, hỏng, cam kết giải quyết 100% không để khách thiệt.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">*QUY ĐỊNH BẢO HÀNH, ĐỔI TRẢ *(QUAY VIDEO KHI MỞ HÀNG)</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">1.Điều kiện áp dụng (trong vòng 3 ngày kể khi nhận được sản phẩm)</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Hàng hóa vẫn còn nguyên seal chưa tháo bịch , nguyên vẹn chưa qua sử dụng.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Sản phẩm bị lỗi do vận chuyển hoặc lỗi do nhà sản xuất. Sản phẩm có dấu hiệu hư hỏng do ảnh hưởng không mong muốn ( do hàng không chất bảo quản, nên đôi lúc sẽ có sản phẩm bị hỏng trước hạn sử dụng, đây là điều bên Vài Ly Đê không mong muốn và cam kết bù-đổi cho khách ).</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">2.Trường hợp được chấp nhận</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Hàng không đúng trọng lượng, mẫu mã như quý khách đặt hàng.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Không đủ số lượng như trong đơn hàng.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">3.Trường hợp không đủ điều kiện áp dụng chính sách:</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Quá 3 ngày sau khi nhận hàng.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Gửi lại hàng không đúng sản phẩm.</p><p style="margin-bottom: 1.3em; color: rgb(10, 10, 10); font-family: Asap, sans-serif; font-size: 16px;">– Đặt nhầm sản phẩm, chủng loại, không thích</p>
+                                        "/Views/DetailProduct/Index.cshtml
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_default_2">
+                            <div class="p-4">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_3">
+                            <div class="p-4 text-center ">
+                                <a href="" class="btn btn-primary">Tải xuống</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_4">
+                            <div class="p-4">
+                                <ul class="list-group list-group-flush">
+                                </ul>
+
+                                <div class="text-center fs-18 opacity-70">
+                                    Chưa có nhận xét nào cho sản phẩm này.
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bg-white rounded shadow-sm">
+                    <div class="border-bottom p-3">
+                        <h3 class="fs-16 fw-600 mb-0">
+                            <span class="mr-4">Sản phẩm tương ứng</span>
+                        </h3>
+                    </div>
+                    <div class="p-3">
+                        <div class="aiz-carousel gutters-5 half-outside-arrow slick-initialized slick-slider" data-items="5" data-xl-items="3" data-lg-items="4" data-md-items="3" data-sm-items="2" data-xs-items="2" data-arrows="true" data-infinite="true">
+                            <button type="button" class="slick-prev slick-arrow" style=""><i class="las la-angle-left"></i></button><div class="slick-list draggable">
+                                <div class="slick-track" style="opacity: 1; width: 5025px; transform: translate3d(-1005px, 0px, 0px);">
+                                    <div class="slick-slide slick-cloned" data-slick-index="-5" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto ls-is-cached lazyloaded" src="/uploads/all/r7vyPvwlzYdpZktFngSIfUxxrYXyMzjbP4Djbck9.png" data-src="/uploads/all/r7vyPvwlzYdpZktFngSIfUxxrYXyMzjbP4Djbck9.png" alt="Khô Heo Cháy Tỏi Dì Bảy, 250gr - Vị ngon nhà làm" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">59,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="-1">Khô Heo Cháy Tỏi Dì Bảy, 250gr - Vị ngon nhà làm</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto lazyloaded" src="/uploads/all/QyWh9LfbUmFPjiLaax9BoveSA2k8Zj0wsaSrpLu3.png" data-src="/uploads/all/QyWh9LfbUmFPjiLaax9BoveSA2k8Zj0wsaSrpLu3.png" alt="Lạp sườn gác bếp" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">18,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="-1">Lạp sườn gác bếp</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto lazyloaded" src="/uploads/all/go4NrE2FaqiH0kHkjNZtDYwF3xp67praefj2a4du.png" data-src="/uploads/all/go4NrE2FaqiH0kHkjNZtDYwF3xp67praefj2a4du.png" alt="Thịt ba chỉ gác bếp" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">250,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="-1">Thịt ba chỉ gác bếp</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto lazyloaded" src="/uploads/all/2mitA9UfZD4vHlWlaLFrWYMWqSLOGFGsmTCmbFHk.jpg" data-src="/uploads/all/2mitA9UfZD4vHlWlaLFrWYMWqSLOGFGsmTCmbFHk.jpg" alt="Thịt trâu đen gác bép 500g chuẩn vị Tây Bắc" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">120,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="-1">Thịt trâu đen gác bép 500g chuẩn vị Tây Bắc</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto lazyloaded" src="/uploads/all/bH8bmxdhL3ZmvXsAYXGW1A2saOMgUAjiXS6hevUA.jpg" data-src="/uploads/all/bH8bmxdhL3ZmvXsAYXGW1A2saOMgUAjiXS6hevUA.jpg" alt="Giò thủ tai heo HungBeoFood" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">87,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="-1">Giò thủ tai heo HungBeoFood</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 201px;">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="0">
+                                                            <img class="img-fit mx-auto ls-is-cached lazyloaded" src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 500gram | LGB | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">253,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="0">Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 500gram | LGB | Vài Ly Đê</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 201px;">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="0">
+                                                            <img class="img-fit mx-auto ls-is-cached lazyloaded" src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 200gram | LGB | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">113,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="0">Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 200gram | LGB | Vài Ly Đê</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 201px;">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="0">
+                                                            <img class="img-fit mx-auto ls-is-cached lazyloaded" src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 100gram | LGB | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">79,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="0">Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 100gram | LGB | Vài Ly Đê</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 201px;">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="0">
+                                                            <img class="img-fit mx-auto lazyloaded" src="/uploads/all/a9l2nUxDpUaLpo5pX4FVdTwAhBnHOpS1bfLd8enf.jpg" data-src="/uploads/all/a9l2nUxDpUaLpo5pX4FVdTwAhBnHOpS1bfLd8enf.jpg" alt="Nem Tré Bình Định BĐ001 Ngon Bổ Rẻ" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">70,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="0">Nem Tré Bình Định BĐ001 Ngon Bổ Rẻ</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 201px;">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="0">
+                                                            <img class="img-fit mx-auto lazyloaded" src="/uploads/all/Pu9su7xWI5ZYVI5kEHxti0awLGzHli5dCHTigTen.jpg" data-src="/uploads/all/Pu9su7xWI5ZYVI5kEHxti0awLGzHli5dCHTigTen.jpg" alt="Tóp mỡ rim mắm tỏi" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">28 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="0">Tóp mỡ rim mắm tỏi</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto lazyloaded" src="/uploads/all/r7vyPvwlzYdpZktFngSIfUxxrYXyMzjbP4Djbck9.png" data-src="/uploads/all/r7vyPvwlzYdpZktFngSIfUxxrYXyMzjbP4Djbck9.png" alt="Khô Heo Cháy Tỏi Dì Bảy, 250gr - Vị ngon nhà làm" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">59,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="-1">Khô Heo Cháy Tỏi Dì Bảy, 250gr - Vị ngon nhà làm</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide" data-slick-index="6" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/detailproduct" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto ls-is-cached lazyloaded" src="/uploads/all/QyWh9LfbUmFPjiLaax9BoveSA2k8Zj0wsaSrpLu3.png" data-src="/uploads/all/QyWh9LfbUmFPjiLaax9BoveSA2k8Zj0wsaSrpLu3.png" alt="Lạp sườn gác bếp" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">190,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/detailproduct" class="d-block text-reset" tabindex="-1">Lạp sườn gác bếp</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide" data-slick-index="7" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/thit-ba-chi-gac-bep" class="d-block" tabindex="-1">
+                                                            <img class="img-fit mx-auto ls-is-cached lazyloaded" src="/uploads/all/go4NrE2FaqiH0kHkjNZtDYwF3xp67praefj2a4du.png" data-src="/uploads/all/go4NrE2FaqiH0kHkjNZtDYwF3xp67praefj2a4du.png" alt="Thịt ba chỉ gác bếp" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">250,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/thit-ba-chi-gac-bep" class="d-block text-reset" tabindex="-1">Thịt ba chỉ gác bếp</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide" data-slick-index="8" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/thit-lon-den-gac-bep-500g-chuan-vi-tay-bac" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/2mitA9UfZD4vHlWlaLFrWYMWqSLOGFGsmTCmbFHk.jpg" alt="Thịt trâu đen gác bép 500g chuẩn vị Tây Bắc" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">120,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/thit-lon-den-gac-bep-500g-chuan-vi-tay-bac" class="d-block text-reset" tabindex="-1">Thịt trâu đen gác bép 500g chuẩn vị Tây Bắc</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide" data-slick-index="9" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/gio-lua-hungbeofood-2" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/bH8bmxdhL3ZmvXsAYXGW1A2saOMgUAjiXS6hevUA.jpg" alt="Giò thủ tai heo HungBeoFood" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">87,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/gio-lua-hungbeofood-2" class="d-block text-reset" tabindex="-1">Giò thủ tai heo HungBeoFood</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="10" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/thit-lon-gac-bep-tay-bac-dai-dai-tung-soi-an-da-mieng-500gram-lgb-vai-ly-de" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 500gram | LGB | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">253,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/thit-lon-gac-bep-tay-bac-dai-dai-tung-soi-an-da-mieng-500gram-lgb-vai-ly-de" class="d-block text-reset" tabindex="-1">Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 500gram | LGB | Vài Ly Đê</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="11" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/thit-lon-gac-bep-tay-bac-dai-dai-tung-soi-an-da-mieng-200gram-lgb-vai-ly-de" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 200gram | LGB | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">113,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/thit-lon-gac-bep-tay-bac-dai-dai-tung-soi-an-da-mieng-200gram-lgb-vai-ly-de" class="d-block text-reset" tabindex="-1">Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 200gram | LGB | Vài Ly Đê</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="12" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/thit-lon-gac-bep-tay-bac-dai-dai-tung-soi-an-da-mieng-100gram-lgb-vai-ly-de" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/LDwcaUf0pdxLHWSBK82ithBwTZNOBUyWNXZT6gW2.png" alt="Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 100gram | LGB | Vài Ly Đê" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">79,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/thit-lon-gac-bep-tay-bac-dai-dai-tung-soi-an-da-mieng-100gram-lgb-vai-ly-de" class="d-block text-reset" tabindex="-1">Thịt trâu gác bếp Tây Bắc dai dai từng sợi ăn đã miệng 100gram | LGB | Vài Ly Đê</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="13" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/nem-tre-binh-dinh-bd001-ngon-bo-re" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/a9l2nUxDpUaLpo5pX4FVdTwAhBnHOpS1bfLd8enf.jpg" alt="Nem Tré Bình Định BĐ001 Ngon Bổ Rẻ" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">70,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/nem-tre-binh-dinh-bd001-ngon-bo-re" class="d-block text-reset" tabindex="-1">Nem Tré Bình Định BĐ001 Ngon Bổ Rẻ</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="14" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/top-mo-rim-mam-toi" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/Pu9su7xWI5ZYVI5kEHxti0awLGzHli5dCHTigTen.jpg" alt="Tóp mỡ rim mắm tỏi" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">28 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/top-mo-rim-mam-toi" class="d-block text-reset" tabindex="-1">Tóp mỡ rim mắm tỏi</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="15" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/kho-heo-chay-toi-di-bay-250gr-vi-ngon-nha-lam" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/r7vyPvwlzYdpZktFngSIfUxxrYXyMzjbP4Djbck9.png" alt="Khô Heo Cháy Tỏi Dì Bảy, 250gr - Vị ngon nhà làm" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">59,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/kho-heo-chay-toi-di-bay-250gr-vi-ngon-nha-lam" class="d-block text-reset" tabindex="-1">Khô Heo Cháy Tỏi Dì Bảy, 250gr - Vị ngon nhà làm</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="16" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/lap-suon-gac-bep" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/QyWh9LfbUmFPjiLaax9BoveSA2k8Zj0wsaSrpLu3.png" alt="Lạp sườn gác bếp" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">190,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/lap-suon-gac-bep" class="d-block text-reset" tabindex="-1">Lạp sườn gác bếp</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="17" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/thit-ba-chi-gac-bep" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/go4NrE2FaqiH0kHkjNZtDYwF3xp67praefj2a4du.png" alt="Thịt ba chỉ gác bếp" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">250,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/thit-ba-chi-gac-bep" class="d-block text-reset" tabindex="-1">Thịt ba chỉ gác bếp</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="18" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/thit-lon-den-gac-bep-500g-chuan-vi-tay-bac" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/2mitA9UfZD4vHlWlaLFrWYMWqSLOGFGsmTCmbFHk.jpg" alt="Thịt trâu đen gác bép 500g chuẩn vị Tây Bắc" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">120,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/thit-lon-den-gac-bep-500g-chuan-vi-tay-bac" class="d-block text-reset" tabindex="-1">Thịt trâu đen gác bép 500g chuẩn vị Tây Bắc</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="slick-slide slick-cloned" data-slick-index="19" id="" aria-hidden="true" style="width: 201px;" tabindex="-1">
+                                        <div>
+                                            <div class="carousel-box" style="width: 100%; display: inline-block;">
+                                                <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                    <div class="">
+                                                        <a href="/product/gio-lua-hungbeofood-2" class="d-block" tabindex="-1">
+                                                            <img class="img-fit lazyload mx-auto " src="/img/placeholder.jpg" data-src="/uploads/all/bH8bmxdhL3ZmvXsAYXGW1A2saOMgUAjiXS6hevUA.jpg" alt="Giò thủ tai heo HungBeoFood" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-md-3 p-2 text-left">
+                                                        <div class="fs-15">
+                                                            <span class="fw-700 text-primary">87,000 VND</span>
+                                                        </div>
+                                                        <div class="rating rating-sm mt-1">
+                                                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                                        </div>
+                                                        <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                                            <a href="/product/gio-lua-hungbeofood-2" class="d-block text-reset" tabindex="-1">Giò thủ tai heo HungBeoFood</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><button type="button" class="slick-next slick-arrow" style=""><i class="las la-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

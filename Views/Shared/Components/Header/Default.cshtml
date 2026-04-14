@@ -1,0 +1,263 @@
+﻿@using UC.eComm.Publish.ViewModels.Shared
+@model HeaderViewModel
+<header class=" sticky-top  z-1020 bg-white border-bottom shadow-sm">
+    <div class="position-relative logo-bar-area z-1">
+        <div class="container">
+            <div class="d-flex align-items-center">
+
+                <div class="col-auto col-xl-3 pl-0 pr-3 d-flex align-items-center">
+                    @* <a class="d-block mr-3 ml-0" href="/"> *@
+                    @*     <img src="~/img/UCVN.png" alt="Chợ Nông Sản Online" class="mw-100 h-40px h-md-60px h-xl-auto h-xxl-60px" height="60"> *@
+                    @* </a> *@
+
+
+                    <div class="d-none d-xl-block align-self-stretch category-menu-icon-box ml-auto mr-0">
+                        <div class="h-100 d-flex align-items-center" id="category-menu-icon">
+                            <div class="dropdown-toggle navbar-light bg-light h-40px w-50px pl-2 rounded border c-pointer">
+                                <span class="navbar-toggler-icon"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-lg-none ml-auto mr-0">
+                    <a class="p-2 d-block text-reset" href="javascript:void(0);" data-toggle="class-toggle" data-target=".front-header-search">
+                        <i class="las la-search la-flip-horizontal la-2x"></i>
+                    </a>
+                </div>
+
+                <div class="flex-grow-1 front-header-search d-flex align-items-center bg-white">
+                    <div class="position-relative flex-grow-1">
+                        <form action="/detailproduct" method="GET" class="stop-propagation">
+                            <div class="d-flex position-relative align-items-center">
+                                <div class="d-lg-none" data-toggle="class-toggle" data-target=".front-header-search">
+                                    <button class="btn px-2" type="button"><i class="la la-2x la-long-arrow-left"></i></button>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="border-0 border-lg form-control" id="search" name="keyword" placeholder="Tìm sản phẩm cần mua..." autocomplete="off">
+                                    <div class="input-group-append d-none d-lg-block">
+                                        <button class="btn btn-primary" type="submit">
+                                            <i class="la la-search la-flip-horizontal fs-18"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="typed-search-box stop-propagation document-click-d-none d-none bg-white rounded shadow-lg position-absolute left-0 top-100 w-100" style="min-height: 200px">
+                            <div class="search-preloader absolute-top-center">
+                                <div class="dot-loader">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="search-nothing d-none p-3 text-center fs-16">
+                            </div>
+                            <div id="search-content" class="text-left">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none d-lg-none ml-3 mr-0">
+                    <div class="nav-search-box">
+                        <a href="#" class="nav-box-link">
+                            <i class="la la-search la-flip-horizontal d-inline-block nav-box-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="d-none d-lg-block ml-3 mr-0">
+                    <div class="" id="wishlist">
+                        <a href="/wishlists" class="d-flex align-items-center text-reset">
+                            <i class="la la-heart-o la-2x opacity-80"></i>
+                            <span class="flex-grow-1 ml-1">
+                                <span class="badge badge-primary badge-inline badge-pill">0</span>
+                                <span class="nav-box-text d-none d-xl-block opacity-70">Danh sách yêu thích</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block  align-self-stretch ml-3 mr-0" data-hover="dropdown">
+                    <div class="nav-cart-box dropdown h-100" id="cart_items">
+                        <a href="javascript:void(0)" class="d-flex align-items-center text-reset h-100" data-toggle="dropdown" data-display="static" aria-expanded="false">
+                            <i class="la la-shopping-cart la-2x opacity-80"></i>
+                            <span class="flex-grow-1 ml-1">
+                                <span class="badge badge-primary badge-inline badge-pill cart-count">@Model.Total</span>
+                                <span class="nav-box-text d-none d-xl-block opacity-70">Giỏ hàng</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg p-0 stop-propagation" aria-labelledby="dropdownMenuButton">
+                            @if (Model.Total == 0)
+                            {
+                                <div class="text-center p-3">
+                                    <i class="las la-frown la-3x opacity-60 mb-3"></i>
+                                    <h3 class="h6 fw-700">Chưa có sản phẩm nào trong giỏ hàng</h3>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="p-3 fs-15 fw-600 p-3 border-bottom">
+                                    Các mặt hàng trong giỏ hàng
+                                </div>
+                                <ul class="h-250px overflow-auto c-scrollbar-light list-group list-group-flush">
+                                    @foreach (var cartItem in Model.cartItems)
+                                    {
+                                        <li class="list-group-item">
+                                            <span class="d-flex align-items-center">
+                                                <a href="/product/@cartItem.Slug-@cartItem.Id" class="text-reset d-flex align-items-center flex-grow-1">
+                                                    <img src="@cartItem.Image.Split('|')[0]" data-src="@cartItem.Image.Split('|')[0]" class="img-fit size-60px rounded ls-is-cached lazyloaded" alt="@cartItem.Name">
+                                                    <span class="minw-0 pl-2 flex-grow-1">
+                                                        <span class="fw-600 mb-1 text-truncate-2">
+                                                            @cartItem.Name
+                                                        </span>
+                                                        <span class="">(@cartItem.QuantityInCart)x</span>
+                                                        <span class="">@cartItem.Price.ToString("N0") @cartItem.UnitPrice</span>
+                                                    </span>
+                                                </a>
+                                                <span class="">
+                                                    <button onclick="removeFromCart(@cartItem.Id)" class="btn btn-sm btn-icon stop-propagation">
+                                                        <i class="la la-close"></i>
+                                                    </button>
+                                                </span>
+                                            </span>
+                                        </li>
+                                    }
+
+                                </ul>
+                                <div class="px-3 py-2 fs-15 border-top d-flex justify-content-between">
+                                    <span class="opacity-60">Tạm tính</span>
+                                    <span class="fw-600">@Model.TotalPrice.ToString("N0") VND</span>
+                                </div>
+                                <div class="px-3 py-2 text-center border-top">
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+                                            <a href="/cart" class="btn btn-soft-primary btn-sm">
+                                                Xem giỏ hàng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hover-category-menu position-absolute w-100 top-100 left-0 right-0 d-none z-3" id="hover-category-menu">
+            <div class="container">
+                <div class="row gutters-10 position-relative">
+                    <div class="col-lg-3 position-static">
+                        <div class="aiz-category-menu bg-white rounded  shadow-lg" id="category-sidebar">
+                            <div class="p-3 bg-soft-primary d-none d-lg-block rounded-top all-category position-relative text-left">
+                                <span class="fw-600 fs-16 mr-3">Thể loại</span>
+                                <a href="/detailproduct" class="text-reset">
+                                    <span class="d-none d-lg-inline-block">Xem tất cả &gt;</span>
+                                </a>
+                            </div>
+                            <ul class="list-unstyled categories no-scrollbar py-2 mb-0 text-left">
+
+                                <li class="category-nav-element" data-id="39">
+                                    <a href="/detailproduct" class="text-truncate text-reset py-2 px-3 d-block">
+                                        <img class="cat-image lazyload mr-2 opacity-60" src="/img/placeholder.jpg" data-src="" width="16" alt="Nông sản" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        <span class="cat-name">Nông sản</span>
+                                    </a>
+                                    <div class="sub-cat-menu c-scrollbar-light rounded shadow-lg p-4">
+                                        <div class="c-preloader text-center absolute-center">
+                                            <i class="las la-spinner la-spin la-3x opacity-70"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="category-nav-element" data-id="40">
+                                    <a href="/detailproduct" class="text-truncate text-reset py-2 px-3 d-block">
+                                        <img class="cat-image lazyload mr-2 opacity-60" src="/img/placeholder.jpg" data-src="" width="16" alt="Thực Phẩm" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        <span class="cat-name">Thực Phẩm</span>
+                                    </a>
+                                    <div class="sub-cat-menu c-scrollbar-light rounded shadow-lg p-4">
+                                        <div class="c-preloader text-center absolute-center">
+                                            <i class="las la-spinner la-spin la-3x opacity-70"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="category-nav-element" data-id="83">
+                                    <a href="/detailproduct" class="text-truncate text-reset py-2 px-3 d-block">
+                                        <img class="cat-image lazyload mr-2 opacity-60" src="/img/placeholder.jpg" data-src="" width="16" alt="Gia vị" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        <span class="cat-name">Gia vị</span>
+                                    </a>
+                                    <div class="sub-cat-menu c-scrollbar-light rounded shadow-lg p-4">
+                                        <div class="c-preloader text-center absolute-center">
+                                            <i class="las la-spinner la-spin la-3x opacity-70"></i>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="category-nav-element" data-id="42">
+                                    <a href="/detailproduct" class="text-truncate text-reset py-2 px-3 d-block">
+                                        <img class="cat-image lazyload mr-2 opacity-60" src="/img/placeholder.jpg" data-src="" width="16" alt="Thủy hải sản" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        <span class="cat-name">Lâm sản</span>
+                                    </a>
+                                    <div class="sub-cat-menu c-scrollbar-light rounded shadow-lg p-4">
+                                        <div class="c-preloader text-center absolute-center">
+                                            <i class="las la-spinner la-spin la-3x opacity-70"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="category-nav-element" data-id="99">
+                                    <a href="/detailproduct" class="text-truncate text-reset py-2 px-3 d-block">
+                                        <img class="cat-image lazyload mr-2 opacity-60" src="/img/placeholder.jpg" data-src="" width="16" alt="Trà" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+                                        <span class="cat-name">Trà</span>
+                                    </a>
+                                    <div class="sub-cat-menu c-scrollbar-light rounded shadow-lg p-4">
+                                        <div class="c-preloader text-center absolute-center">
+                                            <i class="las la-spinner la-spin la-3x opacity-70"></i>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bg-white border-top border-gray-200 py-1">
+        <div class="container">
+            <ul class="list-inline mb-0 pl-0 mobile-hor-swipe text-center">
+                <li class="list-inline-item mr-0">
+                    <a href="/" class="opacity-60 fs-14 px-3 py-2 d-inline-block fw-600 hov-opacity-100 text-reset">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="/" class="opacity-60 fs-14 px-3 py-2 d-inline-block fw-600 hov-opacity-100 text-reset">
+                        Chợ Phiên
+                    </a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="/categories" class="opacity-60 fs-14 px-3 py-2 d-inline-block fw-600 hov-opacity-100 text-reset">
+                        Tất cả danh mục
+                    </a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="/" class="opacity-60 fs-14 px-3 py-2 d-inline-block fw-600 hov-opacity-100 text-reset">
+                        Gian hàng
+                    </a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="/" class="opacity-60 fs-14 px-3 py-2 d-inline-block fw-600 hov-opacity-100 text-reset">
+                        Đăng ký bán hàng
+                    </a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="/searchorder" class="opacity-60 fs-14 px-3 py-2 d-inline-block fw-600 hov-opacity-100 text-reset">
+                        Tra cứu đơn hàng
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

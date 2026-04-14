@@ -1,0 +1,553 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<section class="mb-4 pt-3">
+    <div class="container sm-px-0">
+        <form class="" id="search-form" action="" method="GET">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="aiz-filter-sidebar collapse-sidebar-wrap sidebar-xl sidebar-right z-1035">
+                        <div class="overlay overlay-fixed dark c-pointer" data-toggle="class-toggle" data-target=".aiz-filter-sidebar" data-same=".filter-sidebar-thumb"></div>
+                        <div class="collapse-sidebar c-scrollbar-light text-left">
+                            <div class="d-flex d-xl-none justify-content-between align-items-center pl-3 border-bottom">
+                                <h3 class="h6 mb-0 fw-600">Bộ lọc</h3>
+                                <button type="button" class="btn btn-sm p-2 filter-sidebar-thumb" data-toggle="class-toggle" data-target=".aiz-filter-sidebar">
+                                    <i class="las la-times la-2x"></i>
+                                </button>
+                            </div>
+                            <div class="bg-white shadow-sm rounded mb-3">
+                                <div class="fs-15 fw-600 p-3 border-bottom">
+                                    Thể loại
+                                </div>
+                                <div class="p-3">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <a class="text-reset fs-14 fw-600" href="https://chonongsanonline.com/search">
+                                                <i class="las la-angle-left"></i>
+                                                Tất cả danh mục
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a class="text-reset fs-14 fw-600" href="https://chonongsanonline.com/category/nong-san">
+                                                <i class="las la-angle-left"></i>
+                                                Nông sản
+                                            </a>
+                                        </li>
+                                        <li class="ml-4 mb-2">
+                                            <a class="text-reset fs-14" href="https://chonongsanonline.com/category/gao">Gạo</a>
+                                        </li>
+                                        <li class="ml-4 mb-2">
+                                            <a class="text-reset fs-14" href="https://chonongsanonline.com/category/rau-cu">Rau củ</a>
+                                        </li>
+                                        <li class="ml-4 mb-2">
+                                            <a class="text-reset fs-14" href="https://chonongsanonline.com/category/trai-cay">Trái cây</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bg-white shadow-sm rounded mb-3">
+                                <div class="fs-15 fw-600 p-3 border-bottom">
+                                    Khoản giá
+                                </div>
+                                <div class="p-3">
+                                    <div class="aiz-range-slider">
+                                        <div id="input-slider-range" data-range-value-min=" 0 " data-range-value-max=" 369000000 " class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(0%, 0px) scale(0.00135501, 1);"></div></div><div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="500000.0" aria-valuenow="0.0" aria-valuetext="0"><div class="noUi-touch-area"></div></div></div><div class="noUi-origin" style="transform: translate(-998.645%, 0px); z-index: 6;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="369000000.0" aria-valuenow="500000.0" aria-valuetext="500000"><div class="noUi-touch-area"></div></div></div></div></div>
+
+                                        <div class="row mt-2">
+                                            <div class="col-6">
+                                                <span class="range-slider-value value-low fs-14 fw-600 opacity-70" data-range-value-low="0" id="input-slider-range-value-low">0</span>
+                                            </div>
+                                            <div class="col-6 text-right">
+                                                <span class="range-slider-value value-high fs-14 fw-600 opacity-70" data-range-value-high="499000" id="input-slider-range-value-high">500000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9">
+
+                    <ul class="breadcrumb bg-transparent p-0">
+                        <li class="breadcrumb-item opacity-50">
+                            <a class="text-reset" href="https://chonongsanonline.com">Trang Chủ</a>
+                        </li>
+                        <li class="breadcrumb-item opacity-50">
+                            <a class="text-reset" href="https://chonongsanonline.com/search">Tất cả danh mục</a>
+                        </li>
+                        <li class="text-dark fw-600 breadcrumb-item">
+                            <a class="text-reset" href="https://chonongsanonline.com/category/nong-san">"Nông sản"</a>
+                        </li>
+                    </ul>
+
+                    <div class="text-left">
+                        <div class="row gutters-5 flex-wrap align-items-center">
+                            <div class="col-lg col-10">
+                                <h1 class="h6 fw-600 text-body">
+                                    Nông sản
+                                </h1>
+                                <input type="hidden" name="keyword" value="">
+                            </div>
+                            <div class="col-2 col-lg-auto d-xl-none mb-lg-3 text-right">
+                                <button type="button" class="btn btn-icon p-0" data-toggle="class-toggle" data-target=".aiz-filter-sidebar">
+                                    <i class="la la-filter la-2x"></i>
+                                </button>
+                            </div>
+                            <div class="col-6 col-lg-auto mb-3 w-lg-200px">
+                                <label class="mb-0 opacity-50">Nhãn hiệu</label>
+                                <div class="dropdown bootstrap-select form-control form-control-sm aiz-">
+                                    <select class="form-control form-control-sm aiz-selectpicker" data-live-search="true" name="brand" onchange="filter()" tabindex="-98">
+                                        <option value="">Tất cả các nhãn hiệu</option>
+                                        <option value="tra-mang-cau-kim-nhien">Trà Mãng Cầu Kim Nhiên</option>
+                                        <option value="lo-banh-trang-co-sau">Lò Bánh Tráng Cô Sáu</option>
+                                        <option value="banh-trang-dua">Bánh Tráng Dừa</option>
+                                        <option value="beany-food">Beany Food</option>
+                                        <option value="monomi">Monomi</option>
+                                        <option value="beyond-infinity">Beyond Infinity</option>
+                                        <option value="Bp-ng-Hong-othQX">Bếp Ông Hoàng</option>
+                                        <option value="Anh-Store-N8h3g">Anh Store</option>
+                                        <option value="nhm-5-Drink-CfFdu">nhóm 5 Drink</option>
+                                        <option value="ch-tri-cy-xlcuj">Chợ trái cây</option>
+                                        <option value="Bnh-trng-phi-nng-LNEaf">Bánh tráng phơi nắng</option>
+                                        <option value="Kinh--FrGuR">Kinh Đô</option>
+                                        <option value="-n-Vt-Store-Q6CW0">Đồ Ăn Vặt Store</option>
+                                        <option value="Bn-u-mm-tm-4-ch-em-QSVY9">Bún đậu mắm tôm 4 chị em</option>
+                                        <option value="board-game-uni-store-kz8z3">Board Game Uni Store</option>
+                                        <option value="N5-Tp-Ha-2hand-sDBAx">N5 Tạp Hóa 2hand</option>
+                                        <option value="Chay-T-Tm-yqXEv">Chay Từ Tâm</option>
+                                        <option value="OHYvn-epJt9">OHY.vn</option>
+                                        <option value="Truely-totes-alPdt">Truely totes</option>
+                                        <option value="Nn-Xinh-x6GPh">Nến Xinh</option>
+                                        <option value="OnlyTee-SmlPN">OnlyTee</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Tất cả các nhãn hiệu"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Tất cả các nhãn hiệu</div></div> </div></button><div class="dropdown-menu "><div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-1" aria-autocomplete="list"></div><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-auto mb-3 w-lg-200px">
+                                <label class="mb-0 opacity-50">Sắp xếp theo</label>
+                                <div class="dropdown bootstrap-select form-control form-control-sm aiz-">
+                                    <select class="form-control form-control-sm aiz-selectpicker" name="sort_by" onchange="filter()" tabindex="-98">
+                                        <option value="newest">Mới nhất</option>
+                                        <option value="oldest">Cũ nhất</option>
+                                        <option value="price-asc">Giá thấp đến cao</option>
+                                        <option value="price-desc">Giá từ cao đến thấp</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" title="Mới nhất"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Mới nhất</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-2" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="min_price" value="">
+                    <input type="hidden" name="max_price" value="">
+                    <div class="row gutters-5 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-4 row-cols-md-3 row-cols-2">
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/kho-bo-xe-soi-dam-da-cay-nong-tung-soi-1kg-bxs-vai-ly-de" class="d-block">
+                                        <img class="img-fit mx-auto ls-is-cached lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/9KLBKgdRjQFzHaIe1pfP5jqNnQr5lpCt9z5UjgoB.png" data-src="https://cdn.chonongsanonline.com/uploads/all/9KLBKgdRjQFzHaIe1pfP5jqNnQr5lpCt9z5UjgoB.png" alt="Khô bò xé sợi đậm đà cay nồng từng sợi 1kg | BXS | Vài Ly Đê" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15739)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15739)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">499,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/kho-bo-xe-soi-dam-da-cay-nong-tung-soi-1kg-bxs-vai-ly-de" class="d-block text-reset">Khô bò xé sợi đậm đà cay nồng từng sợi 1kg | BXS | Vài Ly Đê</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/dau-goi-bo-ket-thien-nhien-misuu-organic" class="d-block">
+                                        <img class="img-fit mx-auto lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/JxQD6mH93PznE9myTF3llIJKUhDPtprIZ00CdYdB.png" data-src="https://cdn.chonongsanonline.com/uploads/all/JxQD6mH93PznE9myTF3llIJKUhDPtprIZ00CdYdB.png" alt="Dầu gội bồ kết thiên nhiên MiSuu Organic 100ml" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15667)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15667)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">75,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/dau-goi-bo-ket-thien-nhien-misuu-organic" class="d-block text-reset">Dầu gội bồ kết thiên nhiên MiSuu Organic 100ml</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/luoc-go-dan-huong" class="d-block">
+                                        <img class="img-fit mx-auto lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/8hKzlv8wjsjrtl06dfdowJTVQEHZu9OWBAsTMW4F.jpg" data-src="https://cdn.chonongsanonline.com/uploads/all/8hKzlv8wjsjrtl06dfdowJTVQEHZu9OWBAsTMW4F.jpg" alt="Lược gỗ Đàn Hương" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15666)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15666)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">65,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/luoc-go-dan-huong" class="d-block text-reset">Lược gỗ Đàn Hương</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/dau-u-xa-bo-ket-misuu-organic" class="d-block">
+                                        <img class="img-fit mx-auto lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/nzZltHduj3x4pm3wS8CJdn5c4mRnfD657RZs7Kzb.png" data-src="https://cdn.chonongsanonline.com/uploads/all/nzZltHduj3x4pm3wS8CJdn5c4mRnfD657RZs7Kzb.png" alt="Dầu Ủ - Xả bồ kết MiSuu Organic 250gr" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15665)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15665)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">209,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/dau-u-xa-bo-ket-misuu-organic" class="d-block text-reset">Dầu Ủ - Xả bồ kết MiSuu Organic 250gr</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/dau-goi-bo-ket-misuu-organic-4-3-3" class="d-block">
+                                        <img class="img-fit mx-auto lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/96piKnRQE2Nm8ezOHekV6RAS4dGLVKvepjJwYJHU.png" data-src="https://cdn.chonongsanonline.com/uploads/all/96piKnRQE2Nm8ezOHekV6RAS4dGLVKvepjJwYJHU.png" alt="Dầu Gội Bồ Kết MiSuu Organic 500ml" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15664)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15664)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">210,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/dau-goi-bo-ket-misuu-organic-4-3-3" class="d-block text-reset">Dầu Gội Bồ Kết MiSuu Organic 500ml</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/dau-goi-bo-ket-misuu-organic-4-3" class="d-block">
+                                        <img class="img-fit mx-auto lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/uJVsDQneh6XbQ6mWQPBiHAxVWXRYn7AOwVXQvqhS.png" data-src="https://cdn.chonongsanonline.com/uploads/all/uJVsDQneh6XbQ6mWQPBiHAxVWXRYn7AOwVXQvqhS.png" alt="Dầu Gội Bồ Kết MiSuu Organic 300ml" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15663)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15663)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">145,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/dau-goi-bo-ket-misuu-organic-4-3" class="d-block text-reset">Dầu Gội Bồ Kết MiSuu Organic 300ml</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/may-dong-goi" class="d-block">
+                                        <img class="img-fit mx-auto lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/wGAjaSdcmRigb3xezKsHQrJfBr84lyoN6vv1TaJa.jpg" data-src="https://cdn.chonongsanonline.com/uploads/all/wGAjaSdcmRigb3xezKsHQrJfBr84lyoN6vv1TaJa.jpg" alt="Máy đóng gói - PMS Việt Nam" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15611)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15611)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">0 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/may-dong-goi" class="d-block text-reset">Máy đóng gói - PMS Việt Nam</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/thap-cam-say-kho" class="d-block">
+                                        <img class="img-fit mx-auto lazyloaded" src="https://cdn.chonongsanonline.com/uploads/all/PYFvLJmGFWCjOzJXSyi1pB4XF3lS2i2mFTwS87ET.png" data-src="https://cdn.chonongsanonline.com/uploads/all/PYFvLJmGFWCjOzJXSyi1pB4XF3lS2i2mFTwS87ET.png" alt="Thập cẩm sấy khô" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15590)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15590)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">40 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/thap-cam-say-kho" class="d-block text-reset">Thập cẩm sấy khô</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/khoai-lang-say-kho-2" class="d-block">
+                                        <img class="img-fit lazyload mx-auto " src="https://chonongsanonline.com/public/assets/img/placeholder.jpg" data-src="https://cdn.chonongsanonline.com/uploads/all/1zyWcwndZBZUuyXgMjkV9XBnfAjKeqcvHNX7icDH.png" alt="Khoai lang sấy khô" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15589)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15589)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">40 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/khoai-lang-say-kho-2" class="d-block text-reset">Khoai lang sấy khô</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/hat-dieu-say-kho" class="d-block">
+                                        <img class="img-fit lazyload mx-auto " src="https://chonongsanonline.com/public/assets/img/placeholder.jpg" data-src="https://cdn.chonongsanonline.com/uploads/all/LCjJJWYYODGHJt3Uo0FwtXXlGDeIAUsHszKy55MS.png" alt="Hạt điều sấy khô" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15588)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15588)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">80,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/hat-dieu-say-kho" class="d-block text-reset">Hạt điều sấy khô</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/chuoi-ngao-duong" class="d-block">
+                                        <img class="img-fit lazyload mx-auto " src="https://chonongsanonline.com/public/assets/img/placeholder.jpg" data-src="https://cdn.chonongsanonline.com/uploads/all/1zyWcwndZBZUuyXgMjkV9XBnfAjKeqcvHNX7icDH.png" alt="Chuối ngào đường" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15587)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15587)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">40,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/chuoi-ngao-duong" class="d-block text-reset">Chuối ngào đường</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="aiz-card-box border border-light rounded hov-shadow-md mt-1 mb-2 has-transition bg-white">
+                                <div class="position-relative">
+                                    <a href="https://chonongsanonline.com/product/hat-dieu-rang-bo-500g-hu-nhua-tron-hat-dieu-dat-viet" class="d-block">
+                                        <img class="img-fit lazyload mx-auto " src="https://chonongsanonline.com/public/assets/img/placeholder.jpg" data-src="https://cdn.chonongsanonline.com/uploads/all/jOkGBj5U0jqBlhKq80Py28lv5RURN304DPiBGZRx.png" alt="Hạt Điều Rang Bơ 500G – Hũ Nhựa Tròn | Hạt Điều Đất Việt" onerror="this.onerror=null;this.src='https://chonongsanonline.com/public/assets/img/placeholder.jpg';">
+                                    </a>
+                                    <div class="absolute-top-right aiz-p-hov-icon">
+                                        <a href="javascript:void(0)" onclick="addToWishList(15586)" data-toggle="tooltip" data-title="Thêm vào danh sách yêu thích" data-placement="left">
+                                            <i class="la la-heart-o"></i>
+                                        </a>
+
+                                        <a href="javascript:void(0)" onclick="showAddToCartModal(15586)" data-toggle="tooltip" data-title="Thêm vào giỏ hàng" data-placement="left">
+                                            <i class="las la-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-md-3 p-2 text-left">
+                                    <div class="fs-16">
+
+                                        <span class="fw-700 text-primary">290,000 VND</span>
+                                    </div>
+                                    <div class="rating rating-sm mt-1">
+                                        <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                                    </div>
+                                    <h3 class="fw-600 fs-16 text-truncate-2 lh-1-4 mb-0 h-37px">
+                                        <a href="https://chonongsanonline.com/product/hat-dieu-rang-bo-500g-hu-nhua-tron-hat-dieu-dat-viet" class="d-block text-reset">Hạt Điều Rang Bơ 500G – Hũ Nhựa Tròn | Hạt Điều Đất Việt</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aiz-pagination aiz-pagination-center mt-4">
+                        <nav>
+                            <ul class="pagination">
+
+                                <li class="page-item disabled" aria-disabled="true" aria-label="« Trang trước">
+                                    <span class="page-link" aria-hidden="true">‹</span>
+                                </li>
+
+
+
+
+
+                                <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=2">2</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=3">3</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=4">4</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=5">5</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=6">6</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=7">7</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=8">8</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=9">9</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=10">10</a></li>
+
+                                <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+
+
+
+
+
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=192">192</a></li>
+                                <li class="page-item"><a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=193">193</a></li>
+
+
+                                <li class="page-item">
+                                    <a class="page-link" href="https://chonongsanonline.com/category/nong-san?page=2" rel="next" aria-label="Trang sau »">›</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
