@@ -1,25 +1,20 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
+# Sử dụng SDK .NET 8 để build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["UC.Razor.Web/UC.Razor.Web.csproj", "UC.Razor.Web/"]
-RUN dotnet restore "./UC.Razor.Web/./UC.Razor.Web.csproj"
-COPY . .
-WORKDIR "/src/UC.Razor.Web"
-RUN dotnet build "./UC.Razor.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./UC.Razor.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "UC.Razor.Web.dll"]
+
+# Copy file .csproj và restore dependencies
+COPY ["UC.eComm.Publish/UC.eComm.Publish.csproj", "UC.eComm.Publish/"]
+RUN dotnet restore "UC.eComm.Publish/UC.eComm.Publish.csproj"
+
+# Copy toàn bộ code còn lại
+COPY . .
+
+# Build và publish project
+WORKDIR "/app/UC.eComm.Publish"
+RUN dotnet publish "UC.eComm.Publish.csproj" -c Release -o /app/publish
+
+# Runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "UC.eComm.Publish.dll"]
